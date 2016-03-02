@@ -1,0 +1,2973 @@
+/*
+    Awesome CSS layout by /u/ggitaliano (slightly tweaked by Relic)
+    Last modified: 6 March 2015
+
+    Night mode accessible at http://nm.reddit.com/r/space
+    
+------------------------------------------------------------- */
+
+/* Body
+------------------------------------------------------------- */
+body {
+  background: #EEE; }
+  html.res-nightmode body, html:lang(nm) body {
+    background: url(%%bgs%%) 0 -330px repeat #010101 !important;
+    background-size: cover !important; }
+/*
+.side {
+    margin-top: 280px !important;
+}
+
+.side .md a[href*="https://redd.it/3o3yp1/"], .side .md a[href*="https://twitter.com/exploreplanets"] {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 254px;
+    background: url(%%jplama%%);
+    top: 209px;
+    background-position: center;
+}*/
+
+
+.flair-esa {
+    padding: 4px;
+}
+
+.flair-esa::before {
+    content: '';
+    display: inline-block;
+    background: url(%%esa%%);
+    width: 16px; height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+/* Links
+------------------------------------------------------------- */
+a:hover {
+  text-decoration: none !important; }
+
+/* Blockquotes
+------------------------------------------------------------- */
+.md blockquote {
+  padding: 1px 5px;
+  margin: 5px 0;
+  background-color: #FAFAFA;
+  border: none;
+  font-style: italic;
+  color: #808080; }
+  html.res-nightmode .md blockquote, html:lang(nm) .md blockquote {
+    margin: 5px;
+    background-color: transparent;
+    color: #999; }
+
+/* Header container
+------------------------------------------------------------- */
+#header {
+  height: 200px;
+  background: url(%%banner%%) 0 no-repeat;
+  background-size: cover;
+  border: none; }
+  html.res-nightmode #header, html:lang(nm) #header {
+    background: transparent !important; }
+
+/* Subreddit list
+------------------------------------------------------------- */
+#sr-header-area {
+  height: 36px;
+  background: transparent;
+  border: none;
+  z-index: 998; }
+
+#sr-header-area .sr-list {
+  margin-left: 40px;
+  z-index: 998;
+  line-height: 22px; }
+
+/* Hides link separator */
+#sr-header-area .sr-list .separator {
+  visibility: hidden; }
+
+/* Links */
+#sr-header-area a, #sr-header-area .srdrop.dropdown .selected {
+  font-family: Lato, sans-serif;
+  letter-spacing: 1px;
+  color: #777; }
+
+#sr-header-area .selected a {
+  color: #acacac; }
+  html.res-nightmode #sr-header-area .selected a, html:lang(nm) #sr-header-area .selected a {
+    color: #666; }
+
+#sr-header-area a:hover {
+  color: #DDD; }
+
+/* "My subreddits" dropdown icon */
+#sr-header-area .srdrop.dropdown {
+  width: 35px;
+  padding: 0;
+  z-index: 999;
+  cursor: pointer; }
+
+#sr-header-area .srdrop.dropdown {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: 0px;
+  background: url(%%spritesheet%%) no-repeat 11px 12px transparent;
+  line-height: 23px;
+  text-indent: -999em;
+  opacity: 0.8; }
+  html.res-nightmode #sr-header-area .srdrop.dropdown, html:lang(nm) #sr-header-area .srdrop.dropdown, #sr-header-area .srdrop.dropdown .selected {
+    color: #666; }
+
+#sr-header-area .srdrop.dropdown:hover {
+  opacity: 1; }
+
+/* "My subreddits" dropdown list */
+#sr-header-area .drop-choices.srdrop {
+  /* dropdown container */
+  padding: 5px;
+  margin: 1px 0 0 0;
+  background: #F5F5F5;
+  border: none; }
+  html.res-nightmode #sr-header-area .drop-choices.srdrop, html:lang(nm) #sr-header-area .drop-choices.srdrop {
+    margin-left: 2px;
+    background: #111; }
+
+#sr-header-area .drop-choices a.choice {
+  color: gray; }
+
+#sr-header-area .drop-choices a.choice:hover {
+  background-color: #EEE;
+  color: #222; }
+  html.res-nightmode #sr-header-area .drop-choices a.choice:hover, html:lang(nm) #sr-header-area .drop-choices a.choice:hover {
+    background-color: #222;
+    color: #EEE; }
+
+#sr-more-link {
+  color: black;
+  background-color: #000;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 5px 0 15px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 25px; }
+
+/* Main header area
+------------------------------------------------------------- */
+/* Removes snoo */
+#header-img-a {
+  position: absolute;
+  top: 70px;
+  left: 20px; }
+
+/* Sub logo */
+.pagename {
+  display: block;
+  margin: 30px 0 0;
+  font-size: 0;
+  text-align: center;
+  text-indent: -9999px; }
+
+.pagename a {
+  width: 290px;
+  height: 22px;
+  display: block;
+  margin: 0 auto;
+  background: url(%%logo%%) no-repeat; }
+
+/* User menu
+------------------------------------------------------------- */
+#header-bottom-right {
+  height: 35px;
+  padding: 0;
+  top: 165px;
+  right: 45px;
+  bottom: auto;
+  background: transparent;
+  font-family: Lato, sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  line-height: 35px;
+  text-transform: uppercase;
+  z-index: 999; }
+
+#header-bottom-right .separator {
+  visibility: hidden; }
+
+/* Karma */
+#header-bottom-right .user {
+  color: #111; }
+
+#header-bottom-right .user .userkarma {
+  border: none;
+  color: #DDD; }
+  html.res-nightmode #header-bottom-right .user .userkarma, html:lang(nm) #header-bottom-right .user .userkarma {
+    color: #888; }
+
+/* Links */
+#header-bottom-right a {
+  color: #AEAEAE; }
+  html.res-nightmode #header-bottom-right a, html:lang(nm) #header-bottom-right a {
+    color: #666; }
+
+#header-bottom-right a:hover {
+  color: #DDD; }
+
+/* Content menu
+------------------------------------------------------------- */
+#header-bottom-left .tabmenu {
+  margin: 0;
+  position: absolute;
+  top: 145px;
+  right: 0;
+  left: 0;
+  text-align: center; }
+
+#header-bottom-left .tabmenu li {
+  margin: 0; }
+
+#header-bottom-left .tabmenu li.selected a {
+  border: none;
+  color: #EEE; }
+
+#header-bottom-left .tabmenu li a {
+  background: transparent;
+  color: #AEAEAE;
+  font-size: 10px;
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+#header-bottom-left .tabmenu li a:hover {
+  color: #EAEAEA; }
+
+/* Sub menu
+------------------------------------------------------------- */
+.menuarea {
+  padding: 10px;
+  margin: 0 0 1px 0;
+  background: #FBFBFB;
+  border: none;
+  font-family: sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #AAA; }
+  html.res-nightmode .menuarea, html:lang(nm) .menuarea {
+    background: #191919; }
+
+.menuarea .dropdown {
+  margin-left: 5px; }
+
+.menuarea .dropdown {
+  text-decoration: none; }
+
+.menuarea .dropdown:hover {
+  cursor: pointer !important; }
+
+/* Options dropdown */
+.menuarea .drop-choices {
+  padding: 5px;
+  margin: 5px 0 0 -3px;
+  background: #F5F5F5;
+  border: none; }
+  html.res-nightmode .menuarea .drop-choices, html:lang(nm) .menuarea .drop-choices {
+    background: #111; }
+
+.menuarea .drop-choices a.choice {
+  color: gray; }
+
+.menuarea .drop-choices a.choice:hover {
+  background-color: #EEE;
+  color: #222; }
+  html.res-nightmode .menuarea .drop-choices a.choice:hover, html:lang(nm) .menuarea .drop-choices a.choice:hover {
+    background-color: #222;
+    color: #EEE; }
+
+/* No results notification */
+.sitetable > #noresults.error {
+  padding: 10px;
+  margin: 0;
+  background: #FFF;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #999; }
+  html.res-nightmode .sitetable > #noresults.error, html:lang(nm) .sitetable > #noresults.error {
+    background: #161616;
+    color: #666; }
+
+/* Sidebar
+------------------------------------------------------------- */
+.side {
+  margin: 10px 10px 0;
+  background: transparent;
+  color: #777; }
+  html.res-nightmode .side, html:lang(nm) .side {
+    color: #AAA; }
+
+.side .spacer {
+  margin: 0 0 10px; }
+
+/* Search bar */
+.side #search input[type="text"] {
+  background: #FBFBFB;
+  font-size: 11px;
+  padding: 6px;
+  width: 288px;
+  border: none;
+  color: #222; }
+  html.res-nightmode .side #search input[type="text"], html:lang(nm) .side #search input[type="text"] {
+    background: #222;
+    color: #CCC; }
+
+.side #search input[type="text"]:active, .side #search input[type="text"]:focus {
+  outline: none; }
+
+/* Search expando */
+#search #searchexpando {
+  margin-top: 0;
+  border-radius: 0;
+  border: none;
+  background: #F5F5F5;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #888; }
+  html.res-nightmode #search #searchexpando, html:lang(nm) #search #searchexpando {
+    background: #191919;
+    color: #888; }
+
+#search #searchexpando a {
+  color: #2980B9; }
+  html.res-nightmode #search #searchexpando a, html:lang(nm) #search #searchexpando a {
+    color: #EEE; }
+
+#search #searchexpando #moresearchinfo {
+  border: none; }
+
+#search #searchexpando dl {
+  color: #666; }
+
+/* Submit button */
+.submit.submit-text .morelink {
+  background: #4AA3DF;
+  border: none; }
+  html.res-nightmode .submit.submit-text .morelink, html:lang(nm) .submit.submit-text .morelink {
+    background: #3BC492; }
+
+.submit.submit-text .morelink:hover {
+  background: #3A9CDC; }
+  html.res-nightmode .submit.submit-text .morelink:hover, html:lang(nm) .submit.submit-text .morelink:hover {
+    background: #37B587; }
+
+.submit.submit-text .morelink a {
+  font-family: Lato, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #EEE; }
+
+.submit.submit-link, .nub {
+  display: none; }
+
+/* Removes sidebar header */
+h1.redditname {
+  display: none; }
+
+/* Removes mod, contributor, flair boxes */
+.titlebox .leavemoderator, .titlebox .toggle.leavecontributor-button, .titlebox .toggle.flairtoggle, .titlebox .tagline {
+  display: none; }
+
+/* Subscribe button */
+.fancy-toggle-button {
+  width: 300px;
+  height: 25px;
+  margin: 0;
+  background: transparent;
+  border-radius: 0;
+  line-height: 23px; }
+
+.fancy-toggle-button .add, .fancy-toggle-button .remove {
+  height: 25px;
+  padding: 0 7px;
+  background: #FBFBFB;
+  border: none;
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #CCC; }
+  html.res-nightmode .fancy-toggle-button .add, html:lang(nm) .fancy-toggle-button .add, html.res-nightmode .fancy-toggle-button .remove, html:lang(nm) .fancy-toggle-button .remove {
+    background: #222;
+    color: #666; }
+
+.fancy-toggle-button .add {
+  background: #FBFBFB;
+  color: #27AE60; }
+  html.res-nightmode .fancy-toggle-button .add, html:lang(nm) .fancy-toggle-button .add {
+    background: #222;
+    color: #EEE; }
+
+.fancy-toggle-button .add:active, .fancy-toggle-button .remove:active {
+  outline: none; }
+
+.fancy-toggle-button.toggle .option.active {
+  width: 286px;
+  display: inline-block; }
+
+/* Subscribers */
+.subscribers {
+  height: 25px;
+  /* 26 FF */
+  padding: 0 7px;
+  margin-top: -25px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  background: #FBFBFB;
+  font-size: 11px;
+  line-height: 25px; }
+  html.res-nightmode .subscribers, html:lang(nm) .subscribers {
+    background: #222; }
+
+.subscribers .word {
+  display: none; }
+
+.subscribers .number:after {
+  content: " Intelligent Lifeforms"; }
+
+/* Removes # users online */
+.users-online {
+  display: none; }
+
+/* Sidebar content area */
+.side .titlebox {
+  font-family: sans-serif; }
+
+.side .titlebox .md {
+  padding: 0;
+  background: #F5F5F5; }
+  html.res-nightmode .side .titlebox .md, html:lang(nm) .side .titlebox .md {
+    background: #191919 !important;
+    color: #888 !important; }
+
+html.res-nightmode .side .titlebox .md p, html:lang(nm) .side .titlebox .md p {
+  color: #888 !important; }
+
+/* Sidebar links */
+.side .titlebox .md a {
+  color: #2980B9; }
+  html.res-nightmode .side .titlebox .md a, html:lang(nm) .side .titlebox .md a {
+    color: #EEE !important; }
+
+.side .titlebox .md a[href="/r/space/about/traffic"] {
+  font-size: 10px; }
+
+/* Sidebar section headers */
+.side .titlebox .md h2 {
+  margin: 0;
+  padding: 10px 10px;
+  background: #FBFBFB;
+  font-size: 12px;
+  color: #555; }
+  html.res-nightmode .side .titlebox .md h2, html:lang(nm) .side .titlebox .md h2 {
+    background: #222;
+    color: #CCC; }
+
+/* Sidebar paragraphs */
+.side .titlebox .md > p {
+  padding: 15px 10px;
+  margin: 0; }
+
+.side .titlebox .md h3 {
+  font-weight: normal;
+  padding: 0 10px; }
+
+.side .titlebox .md h3 + p {
+  font-size: 11px; }
+
+/* First paragraph */
+.side .titlebox .md > p:first-of-type {
+  padding: 15px 15px 20px;
+  margin: 0;
+  text-align: center; }
+
+.side .titlebox .md > p:first-of-type a {
+  display: block;
+  margin-bottom: 5px; }
+
+/* Paragraphs that follow paragraphs or lists */
+.side .titlebox .md > p + p, .side .titlebox .md > ul + p {
+  padding-top: 0; }
+
+/* Sidebar lists */
+.side .titlebox .md ul {
+  margin: 15px 0px;
+  list-style: square; }
+
+.side .titlebox .md ul li {
+  margin: 5px 0; }
+
+/* Sidebar tables */
+.side .titlebox .md table {
+  margin: 0px 0px 10px 0px;
+  width: 100%; }
+.side .titlebox .md table thead {
+  display: none; }
+.side .titlebox .md table th, .side .titlebox .md table td {
+  padding: 5px;
+  border: none;
+  /*text-transform: lowercase;*/ }
+.side .titlebox .md table:first-of-type th, .side .titlebox .md table:first-of-type td {
+  background: #eeeeee; }
+  html.res-nightmode .side .titlebox .md table:first-of-type th, html:lang(nm) .side .titlebox .md table:first-of-type th, html.res-nightmode .side .titlebox .md table:first-of-type td, html:lang(nm) .side .titlebox .md table:first-of-type td {
+    background: #191919; }
+.side .titlebox .md table:first-of-type tbody tr:nth-child(even) td:last-of-type {
+  background: #f5f5f5; }
+  html.res-nightmode .side .titlebox .md table:first-of-type tbody tr:nth-child(even) td:last-of-type, html:lang(nm) .side .titlebox .md table:first-of-type tbody tr:nth-child(even) td:last-of-type {
+    background: #161616; }
+.side .titlebox .md table:first-of-type tr td:first-of-type {
+  background: #fbfbfb;
+  width: 50px; }
+  html.res-nightmode .side .titlebox .md table:first-of-type tr td:first-of-type, html:lang(nm) .side .titlebox .md table:first-of-type tr td:first-of-type {
+    background: #222222; }
+
+/* Nightmode/Normal links (in header) */
+.side .titlebox .md a[href="http://nm.reddit.com/r/space"], .side .titlebox .md a[href="http://www.reddit.com/r/space"] {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 165px;
+  right: 10px;
+  text-indent: -9999px;
+  background: url(%%nm4%%) no-repeat -9999px -9999px;
+  font-size: 0;
+  z-index: 999;
+  opacity: 0.5; }
+
+.side .titlebox .md a[href="http://nm.reddit.com/r/space"] {
+  background-position: 0 0; }
+
+.side .titlebox .md a[href="http://www.reddit.com/r/space"] {
+  background-position: 0 -30px; }
+
+.side .titlebox .md a[href="http://nm.reddit.com/r/space"] {
+  display: block; }
+
+html.res-nightmode .side .titlebox .md a[href="http://www.reddit.com/r/space"], html:lang(nm) .side .titlebox .md a[href="http://www.reddit.com/r/space"] {
+  display: block; }
+
+.side .titlebox .md a[href="http://www.reddit.com/r/space"] {
+  display: none; }
+
+html.res-nightmode .side .titlebox .md a[href="http://nm.reddit.com/r/space"], html:lang(nm) .side .titlebox .md a[href="http://nm.reddit.com/r/space"] {
+  display: none; }
+
+.side .titlebox .md a[href="http://nm.reddit.com/r/space"]:hover, .side .titlebox .md a[href="http://www.reddit.com/r/space"]:hover {
+  opacity: 1; }
+
+.side .titlebox .md > p:last-of-type {
+  padding: 0; }
+
+/* Created by... */
+.side .titlebox .bottom {
+  padding: 7px 10px;
+  background: #FBFBFB;
+  border: none;
+  font-size: 0px;
+  text-align: center;
+  color: #FBFBFB; }
+  html.res-nightmode .side .titlebox .bottom, html:lang(nm) .side .titlebox .bottom {
+    background: #222;
+    color: #222; }
+
+.side .titlebox .bottom a {
+  /* Hides creator */
+  display: none; }
+
+.side .titlebox .bottom .age {
+  /* Only show age */
+  float: none;
+  font-size: 10px;
+  color: #AAA; }
+  html.res-nightmode .side .titlebox .bottom .age, html:lang(nm) .side .titlebox .bottom .age {
+    color: #666; }
+
+/* Sidebar border breaks */
+.side hr {
+  visibility: hidden;
+  display: none; }
+
+/* Removes create a subreddit */
+.sidebox.create {
+  display: none; }
+
+/* Mod tools, mods, recent links */
+.sidecontentbox {
+  margin-bottom: -10px;
+  font-family: sans-serif; }
+
+.sidecontentbox .title {
+  /* Headers */
+  padding: 10px;
+  background: #FBFBFB;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: none;
+  color: #555; }
+  html.res-nightmode .sidecontentbox .title, html:lang(nm) .sidecontentbox .title {
+    background: #222;
+    color: #CCC; }
+
+.sidecontentbox#moderation_tools .title {
+  border-bottom: 1px solid #F5F5F5; }
+  html.res-nightmode .sidecontentbox#moderation_tools .title, html:lang(nm) .sidecontentbox#moderation_tools .title {
+    border-color: #191919; }
+
+.sidecontentbox .title h1 {
+  font-size: 12px; }
+
+.sidecontentbox .collapse-button {
+  /* Expando button */
+  background: #EEE;
+  border: none;
+  line-height: 7px;
+  color: #666; }
+  html.res-nightmode .sidecontentbox .collapse-button, html:lang(nm) .sidecontentbox .collapse-button {
+    background: #333;
+    color: #AAA; }
+
+.sidecontentbox .content {
+  /* Body */
+  padding: 10px;
+  background: #F5F5F5;
+  border: none; }
+  html.res-nightmode .sidecontentbox .content, html:lang(nm) .sidecontentbox .content {
+    background: #191919; }
+
+.sidecontentbox .content a {
+  /* Links */
+  background-color: transparent;
+  font-size: 12px;
+  color: #2980B9; }
+  html.res-nightmode .sidecontentbox .content a, html:lang(nm) .sidecontentbox .content a {
+    color: #999; }
+  html.res-nightmode .sidecontentbox .content a:hover, html:lang(nm) .sidecontentbox .content a:hover {
+    color: #EEE; }
+
+.sidecontentbox a.helplink {
+  /* message the mods link */
+  margin: 10px 10px 0 0;
+  color: #2980B9; }
+  html.res-nightmode .sidecontentbox a.helplink, html:lang(nm) .sidecontentbox a.helplink {
+    color: #EEE; }
+
+.side > .spacer:nth-last-child(2) .sidecontentbox .content a.reddit-link-title {
+  /* Recent post titles */
+  font-size: 12px;
+  color: #333; }
+  html.res-nightmode .side > .spacer:nth-last-child(2) .sidecontentbox .content a.reddit-link-title, html:lang(nm) .side > .spacer:nth-last-child(2) .sidecontentbox .content a.reddit-link-title {
+    color: #CCC; }
+
+.sidecontentbox .content a.reddit-comment-link {
+  font-size: 11px;
+  color: #AAA; }
+
+.sidecontentbox .content .gadget .midcol {
+  width: 25px;
+  margin: 0 4px 0 -3px; }
+
+.sidecontentbox .content .gadget .right a {
+  font-size: 11px; }
+
+.sidecontentbox .linkflairlabel {
+  /* removes linkflair from recent links */
+  display: none; }
+
+/* Title changes */
+.sidecontentbox#moderation_tools .title:before {
+  content: "Moderation Tools"; }
+
+.sidecontentbox a.helplink + .title:before {
+  content: "Moderators" !important; }
+
+.side > .spacer:nth-last-child(2) .sidecontentbox .title:before {
+  content: "Recently Viewed Links"; }
+
+.sidecontentbox#wikiactions .title:before {
+  content: "Wiki Tools"; }
+
+.sidecontentbox#moderation_tools .title h1, .sidecontentbox a.helplink + .title h1, .side > .spacer:nth-last-child(2) .sidecontentbox .title h1, .sidecontentbox#wikiactions .title h1 {
+  font-size: 0;
+  color: #FBFBFB; }
+  html.res-nightmode .sidecontentbox#moderation_tools .title h1, html:lang(nm) .sidecontentbox#moderation_tools .title h1, html.res-nightmode .sidecontentbox a.helplink + .title h1, html:lang(nm) .sidecontentbox a.helplink + .title h1, html.res-nightmode .side > .spacer:nth-last-child(2) .sidecontentbox .title h1, html:lang(nm) .side > .spacer:nth-last-child(2) .sidecontentbox .title h1, html.res-nightmode .sidecontentbox#wikiactions .title h1, html:lang(nm) .sidecontentbox#wikiactions .title h1 {
+    color: #333; }
+
+/* Account activity link */
+.account-activity-box a {
+  display: block;
+  padding: 7px 10px;
+  background: #FBFBFB;
+  color: #AAA; }
+  html.res-nightmode .account-activity-box a, html:lang(nm) .account-activity-box a {
+    background: #222;
+    color: #666; }
+
+/* Login form
+------------------------------------- */
+.login-form-side {
+  background: #FFF;
+  border: none; }
+  html.res-nightmode .login-form-side, html:lang(nm) .login-form-side {
+    background: #191919; }
+
+.login-form-side input[type=text], .login-form-side input[type=password] {
+  width: 134px;
+  padding: 1px 3px;
+  background: #FBFBFB;
+  border: 1px solid #F5F5F5; }
+  html.res-nightmode .login-form-side input[type=text], html:lang(nm) .login-form-side input[type=text], html.res-nightmode .login-form-side input[type=password], html:lang(nm) .login-form-side input[type=password] {
+    background: #292929 !important;
+    border-color: #292929;
+    color: #CCC; }
+
+.login-form-side #remember-me a.recover-password {
+  color: #2980B9; }
+  html.res-nightmode .login-form-side #remember-me a.recover-password, html:lang(nm) .login-form-side #remember-me a.recover-password {
+    color: #DDD; }
+
+/* Content
+------------------------------------------------------------- */
+body > .content {
+  margin: 46px 320px 0 10px; }
+
+/* Link body */
+.link {
+  padding: 10px 30px 10px 10px;
+  margin: 0 0 1px 0;
+  background: #FFF; }
+  html.res-nightmode .link, html:lang(nm) .link {
+    background: #161616; }
+
+.link.last-clicked {
+  background: #FBFBFB;
+  border: none; }
+  html.res-nightmode .link.last-clicked, html:lang(nm) .link.last-clicked {
+    background: #191919; }
+
+/* Link rank */
+.link .rank {
+  display: none; }
+
+/* Link score */
+.link .midcol {
+  margin: 0 20px 0 10px; }
+
+.link .score {
+  margin: 2px 0 3px;
+  color: #BBB; }
+  html.res-nightmode .link .score, html:lang(nm) .link .score {
+    font-weight: normal; }
+
+/* Upvote/downvote arrows */
+.arrow.up, .arrow.upmod, .arrow.down, .arrow.downmod {
+  background: url(%%spritesheet%%) no-repeat -9999px -9999px !important; }
+  html.res-nightmode .arrow.up, html:lang(nm) .arrow.up, html.res-nightmode .arrow.up:hover, html:lang(nm) .arrow.up:hover, html.res-nightmode .arrow.upmod, html:lang(nm) .arrow.upmod, html.res-nightmode .arrow.upmod:hover, html:lang(nm) .arrow.upmod:hover, html.res-nightmode .arrow.down, html:lang(nm) .arrow.down, html.res-nightmode .arrow.down:hover, html:lang(nm) .arrow.down:hover, html.res-nightmode .arrow.downmod, html:lang(nm) .arrow.downmod, html.res-nightmode .arrow.downmod:hover, html:lang(nm) .arrow.downmod:hover {
+    background: url(%%spritesheet%%) no-repeat -9999px -9999px !important; }
+
+.arrow.up {
+  background-position: 0 -24px !important;
+  opacity: 0.9 !important; }
+  html.res-nightmode .arrow.up, html:lang(nm) .arrow.up, html.res-nightmode .arrow.up:hover, html:lang(nm) .arrow.up:hover {
+    background-position: 0 -24px !important;
+    opacity: 0.9 !important; }
+
+.arrow.upmod {
+  background-position: -15px -24px !important; }
+  html.res-nightmode .arrow.upmod, html:lang(nm) .arrow.upmod, html.res-nightmode .arrow.upmod:hover, html:lang(nm) .arrow.upmod:hover {
+    background-position: -15px -24px !important; }
+
+.arrow.down {
+  background-position: -30px -24px !important;
+  opacity: 0.9 !important; }
+  html.res-nightmode .arrow.down, html:lang(nm) .arrow.down, html.res-nightmode .arrow.down:hover, html:lang(nm) .arrow.down:hover {
+    background-position: -30px -24px !important;
+    opacity: 0.9 !important; }
+
+.arrow.downmod {
+  background-position: -45px -24px !important; }
+  html.res-nightmode .arrow.downmod, html:lang(nm) .arrow.downmod, html.res-nightmode .arrow.downmod:hover, html:lang(nm) .arrow.downmod:hover {
+    background-position: -45px -24px !important; }
+
+/* Link thumbnails */
+.link .thumbnail {
+  max-height: 50px;
+  margin: 0 20px 0 0; }
+  html.res-nightmode .link .thumbnail, html:lang(nm) .link .thumbnail {
+    background-color: transparent;
+    /*display: none;*/ }
+
+.link .thumbnail.self {
+  /* self posts */
+  background: url(%%thumb4%%) no-repeat 0 0; }
+
+.link .thumbnail.default {
+  /* missing image */
+  background: url(%%thumb5%%) no-repeat 0 0; }
+
+/* Link title */
+.link .title {
+  margin-bottom: 7px;
+  font-family: sans-serif; }
+
+.sitetable .link .title a.title {
+  color: #333; }
+  html.res-nightmode .sitetable .link .title a.title, html:lang(nm) .sitetable .link .title a.title {
+    color: #CCC; }
+
+body:not(.single-page) .sitetable .link:not(.stickied) .title a.title:visited {
+  color: #999; }
+  html.res-nightmode body:not(.single-page) .sitetable .link:not(.stickied) .title a.title:visited, html:lang(nm) body:not(.single-page) .sitetable .link:not(.stickied) .title a.title:visited {
+    color: #777; }
+
+.sitetable .link.stickied .title a.title {
+  color: #27AE60; }
+  html.res-nightmode .sitetable .link.stickied .title a.title, html:lang(nm) .sitetable .link.stickied .title a.title {
+    font-weight: normal;
+    color: #37B587; }
+
+/* Nasa.gov title icon */
+.sitetable .link .title a.title[href*="nasa.gov"]:before {
+  content: url(%%nasa%%);
+  position: relative;
+  top: 2px;
+  margin-right: 3px; }
+
+/* Link domain */
+.link .domain {
+  color: #858585; }
+  html.res-nightmode .link .domain, html:lang(nm) .link .domain {
+    color: #161616; }
+
+.link.last-clicked .domain {
+  color: #FBFBFB; }
+  html.res-nightmode .link.last-clicked .domain, html:lang(nm) .link.last-clicked .domain {
+    color: #191919; }
+
+.link .domain a {
+  color: #858585;
+  vertical-align: text-bottom; }
+  html.res-nightmode .link .domain a, html:lang(nm) .link .domain a {
+    color: #444; }
+
+/* Link tagline/info */
+.link .tagline {
+  color: #666;
+  /*#888*/ }
+
+.tagline .stickied-tagline {
+  /* stickied notification */
+  color: #27AE60; }
+  html.res-nightmode .tagline .stickied-tagline, html:lang(nm) .tagline .stickied-tagline {
+    color: #37B587; }
+
+/* Link tagline username */
+.link .tagline a {
+  color: #2980B9; }
+  html.res-nightmode .link .tagline a, html:lang(nm) .link .tagline a {
+    color: #AAA; }
+
+.link .tagline a.moderator {
+  /* moderator */
+  color: #27AE60; }
+  html.res-nightmode .link .tagline a.moderator, html:lang(nm) .link .tagline a.moderator {
+    color: #3BC492; }
+
+/* Link tagline moderator identifier */
+.link .tagline .userattrs {
+  color: #FFF; }
+  html.res-nightmode .link .tagline .userattrs, html:lang(nm) .link .tagline .userattrs {
+    color: #161616; }
+
+.link.last-clicked .tagline .userattrs {
+  color: #FBFBFB; }
+  html.res-nightmode .link.last-clicked .tagline .userattrs, html:lang(nm) .link.last-clicked .tagline .userattrs {
+    color: #191919; }
+
+.link .tagline .userattrs > a {
+  padding: 0 3px; }
+
+.link .tagline .userattrs > a:first-of-type {
+  margin-left: -5px; }
+
+.link .tagline .userattrs .moderator {
+  background: #3BC492;
+  color: #FFF; }
+  html.res-nightmode .link .tagline .userattrs .moderator, html:lang(nm) .link .tagline .userattrs .moderator {
+    background: #0E8F60;
+    color: #CCC; }
+
+/* NSFW stamp */
+.nsfw-stamp acronym {
+  padding: 0;
+  background: transparent;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 9px;
+  color: #E74C3C; }
+  html.res-nightmode .nsfw-stamp acronym, html:lang(nm) .nsfw-stamp acronym {
+    color: #C0392B; }
+
+/* Link options/menu */
+.link .flat-list.buttons li a {
+  padding: 0;
+  font-weight: normal;
+  color: #666; }
+
+.link .flat-list.buttons, body:not(.single-page) .link .flat-list.buttons li.first a {
+  color: #2980B9; }
+  html.res-nightmode .link .flat-list.buttons, html:lang(nm) .link .flat-list.buttons, html.res-nightmode body:not(.single-page) .link .flat-list.buttons li.first a, html:lang(nm) body:not(.single-page) .link .flat-list.buttons li.first a {
+    color: #AAA; }
+
+.link .flat-list.buttons li a:hover {
+  color: #2980B9; }
+  html.res-nightmode .link .flat-list.buttons li a:hover, html:lang(nm) .link .flat-list.buttons li a:hover {
+    color: #AAA; }
+
+.flat-list.buttons li .toggle .error, .flat-list.buttons li.toggle .error {
+  color: #E74C3C; }
+
+.flat-list.buttons li .toggle .error a, .flat-list.buttons li.toggle .error a {
+  color: #333; }
+  html.res-nightmode .flat-list.buttons li .toggle .error a, html:lang(nm) .flat-list.buttons li .toggle .error a, html.res-nightmode .flat-list.buttons li.toggle .error a, html:lang(nm) .flat-list.buttons li.toggle .error a {
+    color: #CCC; }
+
+.flat-list.buttons li form.toggle {
+  color: #999; }
+  html.res-nightmode .flat-list.buttons li form.toggle, html:lang(nm) .flat-list.buttons li form.toggle {
+    color: #AAA; }
+
+/* Link expando button */
+.link .entry .expando-button {
+  width: 20px;
+  height: 20px;
+  margin: 4px 8px 0 0;
+  background: url(%%spritesheet%%) no-repeat -9999px -9999px !important; }
+
+.link .expando-button:hover {
+  cursor: pointer; }
+
+.link .entry .expando-button.selftext.collapsed {
+  background-position: 0 -38px !important; }
+  .link .entry .expando-button.selftext.collapsed:hover {
+    background-position: -20px -38px !important; }
+  html.res-nightmode .link .entry .expando-button.selftext.collapsed, html:lang(nm) .link .entry .expando-button.selftext.collapsed {
+    background-position: -40px -38px !important; }
+  html.res-nightmode .link .entry .expando-button.selftext.collapsed:hover, html:lang(nm) .link .entry .expando-button.selftext.collapsed:hover {
+    background-position: -60px -38px !important; }
+
+.link .entry .expando-button.selftext.expanded {
+  background-position: 0 -58px !important; }
+  .link .entry .expando-button.selftext.expanded:hover {
+    background-position: -20px -58px !important; }
+  html.res-nightmode .link .entry .expando-button.selftext.expanded, html:lang(nm) .link .entry .expando-button.selftext.expanded {
+    background-position: -40px -58px !important; }
+  html.res-nightmode .link .entry .expando-button.selftext.expanded:hover, html:lang(nm) .link .entry .expando-button.selftext.expanded:hover {
+    background-position: -60px -58px !important; }
+
+.link .entry .expando-button.video.collapsed, .link .entry .expando-button.video.expanded {
+  background-position: 0 -78px !important; }
+  .link .entry .expando-button.video.collapsed:hover, .link .entry .expando-button.video.expanded:hover {
+    background-position: -20px -78px !important; }
+  html.res-nightmode .link .entry .expando-button.video.collapsed, html:lang(nm) .link .entry .expando-button.video.collapsed, html.res-nightmode .link .entry .expando-button.video.expanded, html:lang(nm) .link .entry .expando-button.video.expanded {
+    background-position: -40px -78px !important; }
+  html.res-nightmode .link .entry .expando-button.video.collapsed:hover, html:lang(nm) .link .entry .expando-button.video.collapsed:hover, html.res-nightmode .link .entry .expando-button.video.expanded:hover, html:lang(nm) .link .entry .expando-button.video.expanded:hover {
+    background-position: -60px -78px !important; }
+
+/* Loading... */
+.link .expando .error {
+  font-family: sans-serif;
+  color: #999; }
+  html.res-nightmode .link .expando .error, html:lang(nm) .link .expando .error {
+    color: #CCC; }
+
+/* Link body */
+.link .usertext .md {
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-family: sans-serif;
+  line-height: 18px;
+  color: #333; }
+  html.res-nightmode .link .usertext .md, html:lang(nm) .link .usertext .md {
+    color: #BBB; }
+
+.link .usertext .md a {
+  color: #2980B9; }
+  html.res-nightmode .link .usertext .md a, html:lang(nm) .link .usertext .md a {
+    color: #EEE; }
+
+/* Sidebar link info */
+.linkinfo {
+  padding: 0;
+  margin-top: 5px;
+  background: #F5F5F5;
+  border: none;
+  border-radius: 0;
+  font-family: sans-serif; }
+  html.res-nightmode .linkinfo, html:lang(nm) .linkinfo {
+    background: #191919 !important; }
+
+.linkinfo .date {
+  /* post was submitted on ... */
+  padding: 10px 0;
+  margin: 0 0 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666; }
+  html.res-nightmode .linkinfo .date, html:lang(nm) .linkinfo .date {
+    color: #CCC; }
+
+.linkinfo .date span {
+  font-size: 0;
+  color: #F5F5F5; }
+  html.res-nightmode .linkinfo .date span, html:lang(nm) .linkinfo .date span {
+    color: #191919; }
+
+.linkinfo .date span:after {
+  content: "This post was submitted on ";
+  display: inline;
+  font-size: 12px;
+  font-weight: normal;
+  color: #666; }
+  html.res-nightmode .linkinfo .date span:after, html:lang(nm) .linkinfo .date span:after {
+    color: #CCC; }
+
+.linkinfo .score {
+  /* post score (% like it) */
+  /*width: 99px;*/
+  margin: 0 0 0 10px;
+  padding: 0 0 5px;
+  display: inline-block;
+  border: none;
+  font-size: 11px;
+  /*text-align: center;*/
+  color: #666; }
+  html.res-nightmode .linkinfo .score, html:lang(nm) .linkinfo .score {
+    color: #999; }
+
+.linkinfo .score .number {
+  padding: 5px;
+  display: inline-block;
+  vertical-align: -2px;
+  background: #FAFAFA;
+  font-size: 18px;
+  font-weight: 400;
+  color: orangered; }
+  html.res-nightmode .linkinfo .score .number, html:lang(nm) .linkinfo .score .number {
+    background: #161616;
+    color: #999; }
+
+.linkinfo .score .word {
+  display: none; }
+
+.linkinfo .upvotes, .linkinfo .downvotes {
+  /* post upvotes/downvotes */
+  width: 100px;
+  padding: 9px 0;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center; }
+
+.linkinfo .upvotes {
+  /*color: #EEE;*/ }
+  html.res-nightmode .linkinfo .upvotes, html:lang(nm) .linkinfo .upvotes {
+    color: #EEE; }
+
+.linkinfo .downvotes {
+  margin-left: -3px;
+  /*color: #999;*/ }
+  html.res-nightmode .linkinfo .downvotes, html:lang(nm) .linkinfo .downvotes {
+    color: #999; }
+
+.linkinfo .upvotes .number, .linkinfo .downvotes .number {
+  display: block;
+  position: relative;
+  top: 1px;
+  font-size: 18px;
+  font-weight: 100; }
+
+.linkinfo .upvotes .word, .linkinfo .downvotes .word {
+  font-size: 11px; }
+
+.linkinfo .shortlink {
+  /* shortlink */
+  margin-top: 0;
+  font-size: 0;
+  text-align: center;
+  visibility: hidden; }
+
+.linkinfo .shortlink input {
+  width: 296px;
+  height: 30px;
+  margin: 5px 0 -5px 0;
+  background: #FBFBFB;
+  border: none;
+  font-size: 11px;
+  /*text-align: center;*/
+  text-indent: 10px;
+  color: #AAA;
+  visibility: visible; }
+  html.res-nightmode .linkinfo .shortlink input, html:lang(nm) .linkinfo .shortlink input {
+    background: #161616;
+    color: #888; }
+
+/* Pagination */
+.nextprev {
+  padding: 10px;
+  margin: 0;
+  display: block;
+  background: #FBFBFB;
+  font-family: sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #AAA; }
+  html.res-nightmode .nextprev, html:lang(nm) .nextprev {
+    background: #191919;
+    color: #999; }
+
+.nextprev a {
+  padding: 1px 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-weight: bold;
+  color: gray; }
+  html.res-nightmode .nextprev a, html:lang(nm) .nextprev a {
+    color: #EEE; }
+
+.nextprev > a:first-of-type {
+  margin-left: 5px; }
+
+.nextprev a:hover {
+  background: transparent;
+  border: none;
+  color: #333; }
+  html.res-nightmode .nextprev a:hover, html:lang(nm) .nextprev a:hover {
+    color: #FFF; }
+
+.nextprev .separator {
+  margin: 0;
+  visibility: hidden; }
+
+/* Comments
+------------------------------------------------------------- */
+.commentarea {
+  padding: 5px 15px 10px 5px;
+  margin-top: 0;
+  background: #FFF; }
+  html.res-nightmode .commentarea, html:lang(nm) .commentarea {
+    background: #191919; }
+
+/* # comments title */
+.commentarea .panestack-title {
+  padding-bottom: 5px;
+  margin: 10px 0px 0px 10px;
+  border-bottom: none; }
+
+.commentarea .panestack-title .title {
+  font-family: sans-serif;
+  font-size: 13px;
+  text-transform: capitalize;
+  color: #333; }
+  html.res-nightmode .commentarea .panestack-title .title, html:lang(nm) .commentarea .panestack-title .title {
+    color: #CCC; }
+
+/* Comment menu */
+.commentarea .menuarea {
+  margin-top: 10px;
+  background: transparent;
+  font-family: sans-serif;
+  font-size: 12px;
+  text-transform: none; }
+
+.commentarea .panestack-title + .menuarea {
+  margin-top: 0; }
+
+.commentarea .menuarea .toggle.set_contest_mode-button a.togglebutton, .commentarea .menuarea .toggle.set_subreddit_sticky-button a.togglebutton, .commentarea .menuarea span.help-hoverable {
+  color: #666;
+  font-size: 11px;
+  font-weight: normal; }
+
+.commentarea .menuarea .toggle.set_contest_mode-button a.togglebutton:hover, .commentarea .menuarea .toggle.set_subreddit_sticky-button a.togglebutton:hover, .commentarea .menuarea span.help-hoverable:hover {
+  color: #2980B9; }
+  html.res-nightmode .commentarea .menuarea .toggle.set_contest_mode-button a.togglebutton:hover, html:lang(nm) .commentarea .menuarea .toggle.set_contest_mode-button a.togglebutton:hover, html.res-nightmode .commentarea .menuarea .toggle.set_subreddit_sticky-button a.togglebutton:hover, html:lang(nm) .commentarea .menuarea .toggle.set_subreddit_sticky-button a.togglebutton:hover, html.res-nightmode .commentarea .menuarea span.help-hoverable:hover, html:lang(nm) .commentarea .menuarea span.help-hoverable:hover {
+    color: #AAA; }
+
+.commentarea .menuarea .toggle.set_contest_mode-button .error {
+  font-size: 11px;
+  color: #E74C3C; }
+
+.commentarea .menuarea .toggle.set_subreddit_sticky-button .error {
+  font-size: 11px;
+  color: #37B587; }
+
+.commentarea .menuarea .toggle.set_contest_mode-button .option.error a, .commentarea .menuarea .toggle.set_subreddit_sticky-button .option.error a {
+  color: #333; }
+  html.res-nightmode .commentarea .menuarea .toggle.set_contest_mode-button .option.error a, html:lang(nm) .commentarea .menuarea .toggle.set_contest_mode-button .option.error a, html.res-nightmode .commentarea .menuarea .toggle.set_subreddit_sticky-button .option.error a, html:lang(nm) .commentarea .menuarea .toggle.set_subreddit_sticky-button .option.error a {
+    color: #CCC; }
+
+/* No comments message */
+.commentarea #noresults.error {
+  padding: 0;
+  margin: 0 10px 5px;
+  background: transparent;
+  font-family: sans-serif;
+  color: #666; }
+
+/* Comment forms */
+.commentarea > .usertext {
+  margin-bottom: 20px; }
+
+.comment .usertext-edit .bottom-area {
+  margin-bottom: 10px; }
+
+/* Comment (and other) entry field */
+.usertext-edit textarea {
+  padding: 5px;
+  background: #F5F5F5;
+  border: 1px solid #EEE;
+  font-family: sans-serif;
+  color: #333; }
+  html.res-nightmode .usertext-edit textarea, html:lang(nm) .usertext-edit textarea {
+    background: #333;
+    border: 1px solid #333;
+    color: #CCC; }
+
+.usertext-edit textarea:active, .usertext-edit textarea:focus {
+  background: #F8F8F8;
+  border: 1px solid #EEE;
+  outline: none; }
+  html.res-nightmode .usertext-edit textarea:active, html:lang(nm) .usertext-edit textarea:active, html.res-nightmode .usertext-edit textarea:focus, html:lang(nm) .usertext-edit textarea:focus {
+    background: #393939;
+    border: 1px solid #393939;
+    outline: none; }
+
+/* Comment warning */
+.commentarea .usertext > .usertext-edit > div:nth-of-type(1):after {
+  content: "Comments that do not contribute to the discussion, low-effort comments, comments consisting solely of an image, and other comments that violate our guidelines will be removed. These comments should be reported.";
+  width: 502px;
+  padding: 5px 5px;
+  display: block;
+  background: #DEF;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  color: #3498DB; }
+  html.res-nightmode .commentarea .usertext > .usertext-edit > div:nth-of-type(1):after, html:lang(nm) .commentarea .usertext > .usertext-edit > div:nth-of-type(1):after {
+    background-color: #222;
+    color: #888; }
+
+/* Rediquette/Markdown help area and links */
+.commentarea > .usertext > .usertext-edit .bottom-area {
+  width: 510px; }
+
+.usertext-edit .bottom-area a {
+  font-family: sans-serif;
+  color: #2980B9; }
+  html.res-nightmode .usertext-edit .bottom-area a, html:lang(nm) .usertext-edit .bottom-area a {
+    color: #CCC; }
+
+/* Hiding child border when replying */
+.comment .usertext-edit {
+  position: relative; }
+
+.comment .usertext-edit:before {
+  content: "";
+  width: 1px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  background: #FFF; }
+  html.res-nightmode .comment .usertext-edit:before, html:lang(nm) .comment .usertext-edit:before {
+    background: #191919; }
+
+/* Comment expando */
+.comment .tagline a.expand {
+  color: #888; }
+
+.comment .tagline a.expand:hover {
+  background-color: #F5F5F5;
+  color: #666; }
+  html.res-nightmode .comment .tagline a.expand:hover, html:lang(nm) .comment .tagline a.expand:hover {
+    background-color: #333;
+    color: #CCC; }
+
+/* Comment username */
+.comment .tagline a.author {
+  /* comment author */
+  color: #999; }
+
+.comment .tagline a.submitter, .comment .tagline a.submitter.author {
+  color: #3498DB; }
+
+.comment .tagline a.moderator, .comment .tagline a.submitter.moderator {
+  /* moderator */
+  color: #27AE60; }
+  html.res-nightmode .comment .tagline a.moderator, html:lang(nm) .comment .tagline a.moderator, html.res-nightmode .comment .tagline a.submitter.moderator, html:lang(nm) .comment .tagline a.submitter.moderator {
+    /* moderator */
+    color: #3BC492; }
+
+/* Submitter/moderator identifier */
+.comment .tagline .userattrs {
+  color: #FFF; }
+  html.res-nightmode .comment .tagline .userattrs, html:lang(nm) .comment .tagline .userattrs {
+    color: #191919; }
+
+.comment .tagline .userattrs > a {
+  padding: 0 3px; }
+
+.comment .tagline .userattrs > a:first-of-type {
+  margin-left: -5px; }
+
+.comment .tagline .userattrs .submitter {
+  /* submitter */
+  background: #3498DB;
+  color: #FFF; }
+  html.res-nightmode .comment .tagline .userattrs .submitter, html:lang(nm) .comment .tagline .userattrs .submitter {
+    background: #024E81;
+    color: #CCC; }
+
+.comment .tagline .userattrs .moderator {
+  /* moderator */
+  background: #3BC492;
+  color: #FFF; }
+  html.res-nightmode .comment .tagline .userattrs .moderator, html:lang(nm) .comment .tagline .userattrs .moderator {
+    /* moderator */
+    background: #0E8F60;
+    color: #CCC; }
+
+/* Comment body */
+.comment .md {
+  padding-left: 1px;
+  margin: 2px 0 0;
+  font-family: sans-serif;
+  line-height: 18px;
+  color: #333; }
+  html.res-nightmode .comment .md, html:lang(nm) .comment .md {
+    color: #BBB; }
+
+.comment .md a {
+  color: #2980B9; }
+  html.res-nightmode .comment .md a, html:lang(nm) .comment .md a {
+    color: #EEE; }
+
+/* Comment options menu */
+.comment .flat-list.buttons li a {
+  padding: 0;
+  font-weight: normal;
+  color: #666; }
+
+.comment .flat-list.buttons li a:hover {
+  color: #2980B9; }
+  html.res-nightmode .comment .flat-list.buttons li a:hover, html:lang(nm) .comment .flat-list.buttons li a:hover {
+    color: #AAA; }
+
+/* Child comments */
+.comment .child {
+  border-left: 1px dotted #DDD; }
+  html.res-nightmode .comment .child, html:lang(nm) .comment .child {
+    border-color: #333; }
+
+/* Permalink styling */
+.single-page.comments-page .commentarea > .menuarea + form + .infobar {
+  /* infobar */
+  padding: 10px;
+  margin: 15px 0 20px 10px;
+  border: none;
+  background: #F5F5F5;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #333; }
+  html.res-nightmode .single-page.comments-page .commentarea > .menuarea + form + .infobar, html:lang(nm) .single-page.comments-page .commentarea > .menuarea + form + .infobar {
+    background: #222;
+    color: #888; }
+
+.single-page.comments-page .commentarea > .menuarea + form + .infobar a {
+  margin-top: 5px;
+  display: inline-block;
+  color: #2980B9; }
+  html.res-nightmode .single-page.comments-page .commentarea > .menuarea + form + .infobar a, html:lang(nm) .single-page.comments-page .commentarea > .menuarea + form + .infobar a {
+    color: #CCC; }
+
+.comment .usertext.border .usertext-body {
+  /* comment highlighting */
+  /*background: #DEF;*/ }
+  html.res-nightmode .comment .usertext.border .usertext-body, html:lang(nm) .comment .usertext.border .usertext-body {
+    background: #292929; }
+
+/* Highlight latest comments (gold feature) */
+.gold-accent.comment-visits-box {
+  padding: 5px 7px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  background: #369;
+  border: none;
+  border-radius: 0;
+  font-family: sans-serif;
+  color: #FFF; }
+  html.res-nightmode .gold-accent.comment-visits-box, html:lang(nm) .gold-accent.comment-visits-box {
+    background: #292929;
+    color: #CCC; }
+
+.gold-accent.comment-visits-box .title {
+  font-weight: normal; }
+
+html.res-nightmode .new-comment .usertext-body, html:lang(nm) .new-comment .usertext-body {
+  padding-left: 3px;
+  margin: 0;
+  border: none;
+  background-color: #292929; }
+
+/* Comment listing page
+------------------------------------- */
+.listing-page .comment {
+  padding: 10px 10px 1px 10px;
+  margin: 0 0 1px 0;
+  background: #FFF; }
+  html.res-nightmode .listing-page .comment, html:lang(nm) .listing-page .comment {
+    background: #191919; }
+
+.listing-page .comment .parent {
+  margin-bottom: 5px;
+  color: #666; }
+
+.listing-page .comment .parent a.title {
+  font-family: sans-serif;
+  color: #333; }
+  html.res-nightmode .listing-page .comment .parent a.title, html:lang(nm) .listing-page .comment .parent a.title {
+    color: #CCC; }
+
+.listing-page .comment .tagline {
+  color: #666; }
+
+.listing-page .comment .parent a.author, .listing-page .comment .parent a.subreddit {
+  color: #2980B9; }
+  html.res-nightmode .listing-page .comment .parent a.author, html:lang(nm) .listing-page .comment .parent a.author, html.res-nightmode .listing-page .comment .parent a.subreddit, html:lang(nm) .listing-page .comment .parent a.subreddit {
+    color: #AAA; }
+
+/* Submit page
+------------------------------------- */
+/* Submit to /r/space header */
+.submit-page > .content > form + h1 {
+  width: 510px;
+  height: 35px;
+  padding: 0 0 0 10px;
+  margin: 0;
+  background: #4AA3DF;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 35px;
+  color: #aeaeae;
+  font-family: Lato, sans-serif;
+  position: absolute;
+  top: 215px;
+  left: 10px;
+  display: none; }
+
+.submit-page > .content > form + h1 a {
+  color: #FFF; }
+
+/* Link/Text menu */
+.submit-page > .content ul.tabmenu.formtab {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 246px;
+  left: 10px; }
+
+.submit-page > .content ul.tabmenu.formtab li:first-of-type {
+  margin-right: 0; }
+
+.submit-page > .content ul.tabmenu.formtab li a {
+  width: 240px;
+  height: 35px;
+  padding: 0 10px;
+  display: inline-block;
+  background: #FBFBFB;
+  border: none;
+  font-family: Lato, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #CCC; }
+  html.res-nightmode .submit-page > .content ul.tabmenu.formtab li a, html:lang(nm) .submit-page > .content ul.tabmenu.formtab li a {
+    background: #161616;
+    color: #555; }
+
+.submit-page > .content ul.tabmenu.formtab li.selected a {
+  background: #FFF;
+  color: #333; }
+  html.res-nightmode .submit-page > .content ul.tabmenu.formtab li.selected a, html:lang(nm) .submit-page > .content ul.tabmenu.formtab li.selected a {
+    background: #222;
+    color: #EEE; }
+
+/* Main content area */
+.submit-page > .content > .content {
+  margin: 0;
+  padding-top: 1px; }
+
+.submit-page > .content .formtabs-content {
+  width: 520px;
+  padding-top: 10px;
+  margin-top: 50px;
+  border-top: none; }
+
+.submit-page .formtabs-content .spacer {
+  margin: 0; }
+
+/* Infobar */
+.submit-page .formtabs-content .infobar {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #F5F5F5;
+  border: none;
+  font-size: 12px;
+  font-family: sans-serif;
+  color: #777; }
+  html.res-nightmode .submit-page .formtabs-content .infobar, html:lang(nm) .submit-page .formtabs-content .infobar {
+    background-color: #1B1B1B;
+    color: #666; }
+
+/* Field containers */
+.submit-page .formtabs-content .roundfield {
+  background: #FFF;
+  border-radius: 0; }
+  html.res-nightmode .submit-page .formtabs-content .roundfield, html:lang(nm) .submit-page .formtabs-content .roundfield {
+    background: #161616; }
+
+.submit-page .formtabs-content .roundfield#title-field {
+  padding-top: 10px; }
+
+/* Field titles */
+.submit-page .formtabs-content .roundfield .title {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #333; }
+  html.res-nightmode .submit-page .formtabs-content .roundfield .title, html:lang(nm) .submit-page .formtabs-content .roundfield .title {
+    color: #CCC; }
+
+/* Removes "(optional)" from text field */
+.submit-page .formtabs-content .roundfield .gray {
+  display: none; }
+
+/* Field input area */
+.submit-page .formtabs-content .roundfield textarea, .submit-page .formtabs-content .roundfield input {
+  padding: 5px;
+  background: #F5F5F5;
+  border-color: #EEE;
+  font-family: sans-serif;
+  color: #333; }
+  html.res-nightmode .submit-page .formtabs-content .roundfield textarea, html:lang(nm) .submit-page .formtabs-content .roundfield textarea, html.res-nightmode .submit-page .formtabs-content .roundfield input, html:lang(nm) .submit-page .formtabs-content .roundfield input {
+    background: #333;
+    border-color: #333;
+    color: #CCC; }
+
+.submit-page .formtabs-content .roundfield textarea:active, .submit-page .formtabs-content .roundfield textarea:focus, .submit-page .formtabs-content .roundfield input:active, .submit-page .formtabs-content .roundfield input:focus {
+  outline: none;
+  background: #F8F8F8;
+  border: 1px solid #EEE; }
+  html.res-nightmode .submit-page .formtabs-content .roundfield textarea:active, html:lang(nm) .submit-page .formtabs-content .roundfield textarea:active, html.res-nightmode .submit-page .formtabs-content .roundfield textarea:focus, html:lang(nm) .submit-page .formtabs-content .roundfield textarea:focus, html.res-nightmode .submit-page .formtabs-content .roundfield input:active, html:lang(nm) .submit-page .formtabs-content .roundfield input:active, html.res-nightmode .submit-page .formtabs-content .roundfield input:focus, html:lang(nm) .submit-page .formtabs-content .roundfield input:focus {
+    background: #393939;
+    border: 1px solid #393939; }
+
+/* Suggested title button */
+.submit-page #suggest-title button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-family: sans-serif;
+  color: #2980B9; }
+  html.res-nightmode .submit-page #suggest-title button, html:lang(nm) .submit-page #suggest-title button {
+    color: #CCC; }
+  html.res-nightmode .submit-page #suggest-title button:hover, html:lang(nm) .submit-page #suggest-title button:hover {
+    color: #EEE; }
+
+/* Removes suggested subs and gold box */
+.submit-page .formtabs-content .roundfield#reddit-field, .submit-page .gold-accent {
+  display: none; }
+
+/* Bottom rule notice */
+.submit-page .content.submit .info-notice {
+  width: 501px;
+  padding-left: 10px;
+  margin: 10px 0;
+  background: #F5F5F5;
+  border: none;
+  border-radius: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #777; }
+  html.res-nightmode .submit-page .content.submit .info-notice, html:lang(nm) .submit-page .content.submit .info-notice {
+    background: #1B1B1B;
+    color: #666; }
+
+.submit-page .content.submit .info-notice:before {
+  /* removes icon */
+  display: none; }
+
+.submit-page .content.submit .info-notice a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #2980B9; }
+  html.res-nightmode .submit-page .content.submit .info-notice a, html:lang(nm) .submit-page .content.submit .info-notice a {
+    color: #AAA; }
+
+/* Submit button */
+.submit-page .btn[name="submit"] {
+  width: 255px;
+  height: 29px;
+  margin: 0;
+  background: #4AA3DF;
+  border: none;
+  font-family: Lato, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #EEE; }
+  html.res-nightmode .submit-page .btn[name="submit"], html:lang(nm) .submit-page .btn[name="submit"] {
+    background: #3BC492; }
+  .submit-page .btn[name="submit"]:hover {
+    background: #3A9CDC; }
+  html.res-nightmode .submit-page .btn[name="submit"]:hover, html:lang(nm) .submit-page .btn[name="submit"]:hover {
+    background: #37B587; }
+
+/* Search page
+------------------------------------- */
+.search-page .side {
+  margin-top: 5px; }
+
+/* Search summary */
+.search-page .search-summary {
+  margin: 10px 10px 0 0;
+  font-family: sans-serif;
+  color: #AAA; }
+  html.res-nightmode .search-page .search-summary, html:lang(nm) .search-page .search-summary {
+    color: #666; }
+
+.search-page .search-summary .result-count {
+  margin-bottom: 3px; }
+
+.search-page .search-summary a.pretty-button {
+  /* yes/no buttons */
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-bottom: none;
+  border-radius: 0;
+  color: #2980B9; }
+  html.res-nightmode .search-page .search-summary a.pretty-button, html:lang(nm) .search-page .search-summary a.pretty-button {
+    color: #CCC; }
+
+.search-page .search-summary .debuginfo, .search-page .search-summary .debuginfo .icon {
+  padding: 0; }
+
+.search-page .search-summary .debuginfo .content {
+  margin: 0 0 0 5px; }
+
+/* Top container */
+.search-page .searchpane.raisedbox {
+  padding: 15px 10px 15px 15px;
+  margin: 0;
+  background-color: #FBFBFB;
+  border: none; }
+  html.res-nightmode .search-page .searchpane.raisedbox, html:lang(nm) .search-page .searchpane.raisedbox {
+    background-color: #161616; }
+
+/* Previous search header */
+.search-page .searchpane.raisedbox > h4 {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  color: #333 !important;
+  font-size: 12px; }
+  html.res-nightmode .search-page .searchpane.raisedbox > h4, html:lang(nm) .search-page .searchpane.raisedbox > h4 {
+    color: #999 !important; }
+
+/* Search box */
+.search-page .searchpane.raisedbox #search {
+  display: inline-block;
+  position: relative; }
+
+.search-page .searchpane.raisedbox #search input[type="text"] {
+  width: 200px;
+  padding: 7px;
+  border: none;
+  font-size: 11px; }
+  html.res-nightmode .search-page .searchpane.raisedbox #search input[type="text"], html:lang(nm) .search-page .searchpane.raisedbox #search input[type="text"] {
+    background: #222;
+    color: #CCC !important; }
+  .search-page .searchpane.raisedbox #search input[type="text"]:active, .search-page .searchpane.raisedbox #search input[type="text"]:focus {
+    background: #FFF;
+    outline: none; }
+  html.res-nightmode .search-page .searchpane.raisedbox #search input[type="text"]:active, html:lang(nm) .search-page .searchpane.raisedbox #search input[type="text"]:active, html.res-nightmode .search-page .searchpane.raisedbox #search input[type="text"]:focus, html:lang(nm) .search-page .searchpane.raisedbox #search input[type="text"]:focus {
+    background: #292929; }
+
+/* Limit to sub */
+.search-page .searchpane.raisedbox #search label {
+  color: #666; }
+  html.res-nightmode .search-page .searchpane.raisedbox #search label, html:lang(nm) .search-page .searchpane.raisedbox #search label {
+    color: #999; }
+
+/* Expando search info */
+.search-page .searchpane.raisedbox #previoussearch #moresearchinfo {
+  border: none;
+  margin: 5px 0 10px; }
+
+.search-page .searchpane.raisedbox #moresearchinfo a, .search-page .searchpane.raisedbox #moresearchinfo + p a {
+  color: #2980B9; }
+  html.res-nightmode .search-page .searchpane.raisedbox #moresearchinfo a, html:lang(nm) .search-page .searchpane.raisedbox #moresearchinfo a, html.res-nightmode .search-page .searchpane.raisedbox #moresearchinfo + p a, html:lang(nm) .search-page .searchpane.raisedbox #moresearchinfo + p a {
+    color: #CCC; }
+
+.search-page .searchpane.raisedbox #moresearchinfo > p {
+  margin: 0 0 10px;
+  color: #666; }
+  html.res-nightmode .search-page .searchpane.raisedbox #moresearchinfo > p, html:lang(nm) .search-page .searchpane.raisedbox #moresearchinfo > p {
+    color: #888; }
+
+.search-page .searchpane.raisedbox #moresearchinfo dl {
+  color: #666; }
+
+/* Search button */
+.search-page .searchpane.raisedbox #moresearchinfo + p + input {
+  height: 27px;
+  margin-left: 220px;
+  position: absolute;
+  top: 0;
+  background: #F5F5F5;
+  border: none;
+  font-family: lato, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #333; }
+  html.res-nightmode .search-page .searchpane.raisedbox #moresearchinfo + p + input, html:lang(nm) .search-page .searchpane.raisedbox #moresearchinfo + p + input {
+    background: #222;
+    color: #CCC; }
+
+.search-page .searchpane.raisedbox #search input[type="text"]:active ~ input, .search-page .searchpane.raisedbox #search input[type="text"]:focus ~ input, .search-page .searchpane.raisedbox #moresearchinfo + p + input:hover {
+  background: #F5F5F5; }
+  html.res-nightmode .search-page .searchpane.raisedbox #search input[type="text"]:active ~ input, html:lang(nm) .search-page .searchpane.raisedbox #search input[type="text"]:active ~ input, html.res-nightmode .search-page .searchpane.raisedbox #search input[type="text"]:focus ~ input, html:lang(nm) .search-page .searchpane.raisedbox #search input[type="text"]:focus ~ input, html.res-nightmode .search-page .searchpane.raisedbox #moresearchinfo + p + input:hover, html:lang(nm) .search-page .searchpane.raisedbox #moresearchinfo + p + input:hover {
+    background: #222; }
+
+/* Narrow search by sub box */
+.search-page .searchfacets {
+  padding: 15px 15px 20px;
+  margin: 1px 0 5px;
+  background: #FFF;
+  border: none;
+  box-shadow: none; }
+  html.res-nightmode .search-page .searchfacets, html:lang(nm) .search-page .searchfacets {
+    background: #191919; }
+
+.searchfacets .list {
+  margin: 0; }
+
+.searchfacets h4.title {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #333; }
+  html.res-nightmode .searchfacets h4.title, html:lang(nm) .searchfacets h4.title {
+    color: #999; }
+
+.searchfacets .list li {
+  margin-right: 15px;
+  font-size: 12px;
+  font-family: sans-serif; }
+
+.searchfacets .list li a {
+  color: #2980B9; }
+  html.res-nightmode .searchfacets .list li a, html:lang(nm) .searchfacets .list li a {
+    color: #CCC; }
+
+.searchfacets .list li .facet.count {
+  font-size: 11px;
+  color: #AAA; }
+
+/* Sub menu */
+.search-page > .content > .menuarea {
+  margin-top: 10px; }
+
+/* No results */
+.search-page #noresults.error {
+  padding: 10px;
+  margin: 0;
+  background: #FFF;
+  font-family: sans-serif;
+  color: #666; }
+  html.res-nightmode .search-page #noresults.error, html:lang(nm) .search-page #noresults.error {
+    background: #161616; }
+
+/* Related page
+------------------------------------- */
+.related-page .commentarea {
+  background: transparent;
+  padding: 0; }
+
+.related-page .commentarea .panestack-title {
+  margin: 10px 0 1px;
+  padding: 10px;
+  background: #FBFBFB; }
+  html.res-nightmode .related-page .commentarea .panestack-title, html:lang(nm) .related-page .commentarea .panestack-title {
+    background: #191919; }
+
+.related-page .commentarea .panestack-title .title {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #AAA; }
+  html.res-nightmode .related-page .commentarea .panestack-title .title, html:lang(nm) .related-page .commentarea .panestack-title .title {
+    color: #999; }
+
+/* Tabmenu replacement
+------------------------------------- */
+.submit-page > .content:before, .search-page > .content:before, .create-reddit.fancy-settings:before, .flair-settings.fancy-settings:before, .stylesheet-customize-container:before {
+  display: block;
+  position: absolute;
+  top: 147px;
+  right: 0px;
+  left: 0px;
+  font-family: lato, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #EEE;
+  z-index: 999; }
+
+.submit-page > .content:before {
+  content: "Submit to /r/space"; }
+
+.search-page > .content:before {
+  content: "Search results"; }
+
+.create-reddit.fancy-settings:before {
+  content: "Subreddit settings"; }
+
+.flair-settings.fancy-settings:before {
+  content: "Flair settings"; }
+
+.stylesheet-customize-container:before {
+  content: "Stylesheet"; }
+
+/* Footer + Debug info
+------------------------------------- */
+.footer-parent {
+  padding: 50px 0; }
+  html.res-nightmode .footer-parent, html:lang(nm) .footer-parent {
+    padding: 200px 0 500px;
+    background: url(%%bottombg%%) no-repeat bottom center; }
+
+.footer {
+  margin-bottom: 0;
+  border: none; }
+
+.footer .col {
+  /* columns */
+  border-left: none;
+  font-family: sans-serif;
+  font-size: 12px; }
+
+.footer .col .flat-vert.title {
+  /* column titles */
+  font-size: 15px;
+  text-transform: capitalize;
+  color: #999; }
+  html.res-nightmode .footer .col .flat-vert.title, html:lang(nm) .footer .col .flat-vert.title {
+    color: #CCC; }
+
+.footer .col a:not(.buygold) {
+  color: #555; }
+
+.footer .col a:not(.buygold):hover {
+  color: #2980B9; }
+  html.res-nightmode .footer .col a:not(.buygold):hover, html:lang(nm) .footer .col a:not(.buygold):hover {
+    color: #DDD; }
+
+.footer + .bottommenu a {
+  text-decoration: none;
+  color: #2980B9; }
+  html.res-nightmode .footer + .bottommenu a, html:lang(nm) .footer + .bottommenu a {
+    color: #DDD; }
+
+/* Debug info container */
+body > .debuginfo .icon {
+  color: #333; }
+  html.res-nightmode body > .debuginfo .icon, html:lang(nm) body > .debuginfo .icon {
+    color: #EEE; }
+html.res-nightmode body > .debuginfo .content, html:lang(nm) body > .debuginfo .content {
+  color: #AEAEAE; }
+
+/* User flair
+------------------------------------- */
+.flair {
+  border: none;
+  border-radius: 0;
+  padding: 0 3px; }
+  html.res-nightmode .flair, html:lang(nm) .flair {
+    background: #333;
+    color: #999; }
+
+/*.flair-vip {
+    background: #3A9CDC;
+    color: #FFF;
+    html.res-nightmode &, html:lang(nm) &,  {
+        background: #2980B9;
+    }
+}*/
+/* Link flair
+------------------------------------- */
+.linkflairlabel {
+  max-width: none;
+  padding: 2px 4px;
+  margin-right: 8px;
+  background: #3A9CDC;
+  border: none;
+  border-radius: 0;
+  vertical-align: text-top;
+  color: #FFF; }
+  html.res-nightmode .linkflairlabel, html:lang(nm) .linkflairlabel {
+    background: #2980B9; }
+
+/* Not logged in fixes
+------------------------------------- */
+/* User menu text and links */
+body:not(.loggedin) #header-bottom-right .user {
+  color: #AEAEAE; }
+  html.res-nightmode body:not(.loggedin) #header-bottom-right .user, html:lang(nm) body:not(.loggedin) #header-bottom-right .user {
+    color: #666; }
+
+body:not(.loggedin) #header-bottom-right .user a {
+  color: #EEE; }
+  html.res-nightmode body:not(.loggedin) #header-bottom-right .user a, html:lang(nm) body:not(.loggedin) #header-bottom-right .user a {
+    color: #DDD; }
+
+/* Sidebar margin on search page */
+body:not(.loggedin).search-page .side {
+  margin-top: 15px; }
+
+/* Misc
+------------------------------------- */
+/* Welcome message */
+body:not(.loggedin) .infobar.welcome + .infobar {
+  margin: 0 0 10px 0;
+  background: #222;
+  border: none;
+  font-family: sans-serif;
+  color: #CCC; }
+  html.res-nightmode body:not(.loggedin) .infobar.welcome + .infobar, html:lang(nm) body:not(.loggedin) .infobar.welcome + .infobar {
+    background: #222;
+    color: #CCC; }
+
+body:not(.loggedin) .infobar.welcome + .infobar .md {
+  font-size: 12px; }
+
+/*== Link Flair ==*/
+.linkflair-context .linkflairlabel {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 14px; }
+
+.linkflairlabel, .flair {
+  max-width: 100%; }
+
+.linkflair-black .linkflairlabel {
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px; }
+
+.linkflair-error .linkflairlabel, .linkflair-error.linkflairlabel {
+  border: 1px solid white;
+  color: white;
+  background-color: #df7474;
+  border-radius: 4px; }
+
+.linkflair-approved .linkflairlabel {
+  border: 1px solid #0C3;
+  color: #0C3;
+  border-radius: 4px; }
+
+.report-button .option:not(.error):hover:before {
+  color: black;
+  background-color: #CCF;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  content: "Please message the moderators and include a direct link to the post you're reporting, otherwise we won't know why it was reported.";
+  display: block;
+  font-size: 9.5px;
+  font-weight: bold;
+  margin-left: 75px;
+  margin-top: 7px;
+  padding: 5px;
+  position: absolute;
+  text-align: center;
+  z-index: 1000; }
+
+a[id^=nuke_] {
+  vertical-align: sub; }
+
+/* Message The Moderators Hover */
+div.side div.spacer div.sidecontentbox a.helplink:hover::before {
+  transform: translateY(0px);
+  opacity: 1; }
+
+div.side div.spacer div.sidecontentbox a.helplink::before {
+  content: "Please be sure to include all relevant links when messaging the moderators.";
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFF;
+  display: inline-block;
+  position: absolute;
+  width: 283px;
+  right: 10px;
+  margin-top: -52px;
+  background: #e74c3c;
+  border: 1px solid #c0392b;
+  padding: 7px;
+  text-shadow: 0 0 5px #999;
+  border-radius: 3px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 250ms; }
+
+.side .md h3:nth-of-type(1) {
+  position: absolute;
+  margin-top: 10px;
+  top: 200px;
+  left: 10px;
+  right: 320px;
+  height: 16px;
+  display: block;
+  background: white;
+  text-align: left;
+  font-size: 12px;
+  color: #a0a0a0;
+  font-weight: bold;
+  padding: 5px 13px !important; }
+  .side .md h3:nth-of-type(1) a:hover {
+    color: #000; }
+  html.res-nightmode .side .md h3:nth-of-type(1), html:lang(nm) .side .md h3:nth-of-type(1) {
+    background: #1B1B1B; }
+
+html.res-nightmode .link.promotedlink.promoted, html:lang(nm) .link.promotedlink.promoted {
+  background-color: #000000 !important; }
+
+/* Deleted comment shrinker */
+.deleted .grayed {
+  display: none; }
+
+.deleted > .entry .tagline {
+  font-size: 0; }
+
+.deleted .tagline .expand {
+  font-size: x-small; }
+
+.deleted > .entry .noncollapsed:after {
+  content: 'deleted/removed';
+  opacity: 0.5;
+  color: black; }
+
+/* the mod links in the header */
+body.moderator .side .titlebox .md h6:last-of-type {
+  display: block;
+  position: absolute;
+  top: 114px;
+  right: 0px;
+  left: 0px;
+  text-align: center;
+  z-index: 998; }
+
+body.moderator .side .titlebox .md h6 a {
+  color: #EEE; }
+
+body.moderator .side .titlebox .md h6 a {
+  background: transparent;
+  color: #AEAEAE;
+  font-size: 10px;
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 2px 6px 0 6px; }
+
+body.moderator .side .titlebox .md h6 a:hover {
+  color: #EAEAEA; }
+
+body.moderator .side .titlebox .md h6 a[href$="/about/unmoderated/"]:after {
+  content: "unmoderated"; }
+
+body.moderator .side .titlebox .md h6 a[href$="/about/modqueue/"]:after {
+  content: "mod queue"; }
+
+body.moderator .side .titlebox .md h6 a[href$="/about/reports/"]:after {
+  content: "reports"; }
+
+body.moderator .side .titlebox .md h6 a[href$="/about/message/inbox/"]:after {
+  content: "mod mail"; }
+
+body.moderator .side .titlebox .md h6 a[href$="/comments/"]:after {
+  content: "comment feed"; }
+
+body.moderator .side .titlebox .md h6 a[href$="/wiki/edit/sidebar_template"]:after {
+  content: "edit sidebar"; }
+
+/* Mod Flair */
+.author[href$="user/tuber"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/oregono"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/ManWithoutModem"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/relic2279"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/kjoneslol"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/panickedthumb"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/Chezzik"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/ggitaliano"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/Walter_Bishop_PhD"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/AutoModerator"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/SpaceMods"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/aperson"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/Captainpatch"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/coniform"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/dhamster"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/EchoLogic"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/Waz_Met_Jou"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/SpaceSidebar"]::before {
+  content: url(%%rocket%%); }
+
+.author[href$="user/greatyellowshark"]::before {
+  content: url(%%saturn%%); }
+
+.author[href$="user/Zucal"]::before {
+  content: url(%%rocket%%); }
+
+/* improve appearance of mod flair */
+.author::before {
+  vertical-align: sub;
+  margin-right: 3px; }
+
+.author[href$="user/AutoModerator"]::before {
+  visibility: visible;
+  vertical-align: -4px; }
+
+/* improve appearance of mod flair in wiki revision page */
+#siteTable.wikirevisionlisting .author::before {
+  margin-left: -16px; }
+
+/* style the sass wikipage */
+body.wiki-page-stylesheet textarea {
+  font-family: monospace;
+  tab-size: 4;
+  color: #FFF;
+  background: #272822; }
+body.wiki-page-stylesheet .md.wiki {
+  display: none; }
+body.wiki-page-stylesheet .wiki-page-content textarea {
+  display: block !important; }
+
+#sr-form .linefield.usertext:nth-of-type(3) .title::after {
+  content: " You need to edit the sidebar via the wikipage sidebar_template";
+  display: block;
+  padding-left: 9px; }
+
+/* misc margin tweaks */
+.wiki-page .wiki-page-content {
+  margin-right: 10px; }
+
+.infobar {
+  margin: 5px 0px 5px 0px; }
+
+/* this week in space */
+body.post-linkflair-summary .pagename a {
+    background: url(%%twis%%);
+    height: 49px;
+    margin: 30px auto 0px auto;
+}
+
+/******************
+     * Animations
+     ******************/
+@media screen {
+    
+    /* hires logo */
+    .pagename a {
+      background: url(%%space-hidpi%%) no-repeat;
+      background-size: 290px 22px;
+    }
+    body.post-linkflair-summary .pagename a {
+        background-position: 0px -19px;
+        background-size: 290px auto;
+        height: 45px;
+    }
+  /* fancy css3 snoo stuff */
+  @-webkit-keyframes rotate {
+    0% {
+      -webkit-transform: rotate(0deg); }
+
+    100% {
+      -webkit-transform: rotate(360deg); } }
+
+  @-webkit-keyframes aaaa {
+    0% {
+      background-position: 0px -126px; }
+
+    100% {
+      background-position: 0px -378px; } }
+
+  @-webkit-keyframes bobble {
+    0% {
+      -webkit-transform: rotate(15deg); }
+
+    50% {
+      -webkit-transform: rotate(-34deg); }
+
+    100% {
+      -webkit-transform: rotate(15deg); } }
+
+  @-moz-keyframes rotate {
+    0% {
+      -moz-transform: rotate(0deg); }
+
+    100% {
+      -moz-transform: rotate(360deg); } }
+
+  @-moz-keyframes aaaa {
+    0% {
+      background-position: 0px -126px; }
+
+    100% {
+      background-position: 0px -378px; } }
+
+  @-moz-keyframes bobble {
+    0% {
+      -moz-transform: rotate(15deg); }
+
+    50% {
+      -moz-transform: rotate(-34deg); }
+
+    100% {
+      -moz-transform: rotate(15deg); } }
+
+  @-ms-keyframes rotate {
+    0% {
+      -ms-transform: rotate(0deg); }
+
+    100% {
+      -ms-transform: rotate(360deg); } }
+
+  @-ms-keyframes aaaa {
+    0% {
+      background-position: 0px -126px; }
+
+    100% {
+      background-position: 0px -378px; } }
+
+  @-ms-keyframes bobble {
+    0% {
+      -ms-transform: rotate(15deg); }
+
+    50% {
+      -ms-transform: rotate(-34deg); }
+
+    100% {
+      -ms-transform: rotate(15deg); } }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); }
+
+    100% {
+      transform: rotate(360deg); } }
+
+  @keyframes aaaa {
+    0% {
+      background-position: 0px -126px; }
+
+    100% {
+      background-position: 0px -378px; } }
+
+  @keyframes bobble {
+    0% {
+      transform: rotate(15deg); }
+
+    50% {
+      transform: rotate(-34deg); }
+
+    100% {
+      transform: rotate(15deg); } }
+
+  /* fancy css3 transition stuff */
+  /* the subreddit choices dropdown */
+  /* sort options dropdown */
+  /* opacity transitions */
+  /* background color transitions */
+  /* text color transitions */
+  
+  /*santa hat stuff */
+
+  /*#header-img-a ~ .pagename::before {
+      display: block;
+      position: absolute;
+        top: 13px;
+        right: -90px;
+        margin-right: 20px;
+        display: block;
+        width: 54px;
+        height: 41px;
+        background-image: url(%%santahat%%);
+        background-size: 54px 41px;
+        content: "";
+        -webkit-transition: right 9s ease-in-out;
+        transition: right 9s ease-in-out;
+        -webkit-animation: rotate 2s infinite linear;
+        -moz-animation: rotate 2s infinite linear;
+        -ms-animation: rotate 2s infinite linear;
+        animation: rotate 2s infinite linear;
+        z-index: 100;
+  }
+  #header-img-a:hover ~ .pagename::before {
+    right: 100%; }*/
+  #header-img-a::before {
+    position: absolute;
+    top: 0px;
+    /*top: -22px;*/
+    left: 0px;
+    display: block;
+    width: 60px;
+    height: 63px;
+    background: url(%%floatingsnoo2%%) no-repeat;
+    /*width: 60px;
+    height: 86px;
+    background: url(%%floatingsnoo2-santa%%) no-repeat;*/
+    background-position: 0px 0px;
+    content: " ";
+    z-index: 99; }
+  #header-img-a::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 60px;
+    height: 63px;
+    background: url(%%floatingsnoo2%%) no-repeat;
+    background-position: 0px -63px;
+    content: " ";
+    z-index: 98;
+    -webkit-animation: bobble 10s infinite;
+    -moz-animation: bobble 10s infinite;
+    -ms-animation: bobble 10s infinite;
+    animation: bobble 10s infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused; }
+  #header-img-a {
+    z-index: 99;
+    -webkit-animation: bobble 10s infinite;
+    -moz-animation: bobble 10s infinite;
+    -ms-animation: bobble 10s infinite;
+    animation: bobble 10s infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused; }
+  #header-img-a:hover {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running; }
+  #header-img-a:hover::after {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running; }
+  #header-img-a ~ .pagename::after {
+    position: absolute;
+    top: 55px;
+    right: -90px;
+    margin-right: 20px;
+    display: block;
+    width: 60px;
+    height: 63px;
+    background: url(%%floatingsnoo2%%) no-repeat;
+    background-position: 0px -126px;
+    content: " ";
+    z-index: 97;
+    -webkit-transition: right 10s ease-in-out;
+    transition: right 10s ease-in-out;
+    -webkit-animation: rotate 3s infinite linear, aaaa 0.2s steps(4) infinite;
+    -moz-animation: rotate 3s infinite linear, aaaa 0.2s steps(4) infinite;
+    -ms-animation: rotate 3s infinite linear, aaaa 0.2s steps(4) infinite;
+    animation: rotate 3s infinite linear, aaaa 0.2s steps(4) infinite; }
+  .pagename {
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    position: absolute; }
+  .pagename a {
+    margin: 50px auto 0px auto; }
+  #header-img-a:hover ~ .pagename::after {
+    right: 100%; }
+  #header-img {
+    visibility: hidden; }
+  .drop-choices.srdrop.inuse {
+    max-height: 1500px;
+    visibility: visible;
+    transition: max-height 250ms 1ms, visibility 0s linear; }
+  .drop-choices.srdrop {
+    display: block;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 250ms, visibility 0s linear 250ms; }
+  .drop-choices.lightdrop.inuse {
+    max-height: 300px;
+    visibility: visible;
+    transition: max-height 250ms 1ms, visibility 0s linear; }
+  .drop-choices.lightdrop {
+    display: block;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 250ms, visibility 0s linear 250ms; }
+  .side .titlebox .md a[href="http://nm.reddit.com/r/space"], #sr-header-area .srdrop.dropdown {
+    transition: opacity 150ms; }
+  .morelink {
+    transition: background-color 150ms; }
+  #header a, .link .flat-list.buttons li a, .footer .col a, .toggle a, .side h3:nth-of-type(1) a, body.moderator .side .titlebox .md h6 a {
+    transition: color 150ms; } }
+
+/******************
+ * RES tweaks
+ ******************/
+body.res {
+  /* Shortcuts tools top right */ }
+  body.res .link .entry .expando-button.image.collapsedExpando, body.res .link .entry .expando-button.image.expanded {
+    background-position: 0 -98px !important; }
+  body.res .link .entry .expando-button.image.collapsedExpando:hover, body.res .link .entry .expando-button.image.expanded:hover {
+    background-position: -20px -98px !important; }
+  body.res .commentarea .panestack-title {
+    padding-bottom: 10px; }
+  body.res #sr-header-area #srDropdown {
+    width: 35px;
+    padding: 0; }
+  body.res #sr-header-area #srDropdown #srDropdownContainer a {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: url(%%spritesheet%%) no-repeat 11px 12px transparent;
+    line-height: 35px;
+    text-indent: -999em;
+    opacity: 0.5;
+    transition: opacity 150ms; }
+    body.res #sr-header-area #srDropdown #srDropdownContainer a:hover {
+      opacity: 1; }
+  body.res #sr-header-area .srdrop.dropdown:hover {
+    opacity: 1; }
+  body.res #RESStaticShortcuts .separator {
+    visibility: hidden; }
+  body.res #RESStaticShortcuts > .separator:first-of-type {
+    margin-left: -2px; }
+  body.res #srLeftContainer .srSep {
+    color: #555; }
+  body.res #RESShortcuts .subbarlink.RESShortcutsCurrentSub {
+    color: #666 !important; }
+  body.res #RESShortcuts .subbarlink:hover, body.res #RESShortcuts .subbarlink.RESShortcutsCurrentSub:hover {
+    color: #DDD !important; }
+  body.res #srLeftContainer {
+    margin-left: 0;
+    padding-left: 0; }
+  body.res #srLeftContainer, body.res #RESShortcutsViewport {
+    max-height: 35px; }
+  body.res #RESShortcuts {
+    color: #AAA; }
+  body.res #RESShortcuts a, body.res .subbarlink .RESShortcutsCurrentSub {
+    color: #666; }
+  body.res #RESShortcutsEditContainer {
+    background-color: #000;
+    height: 35px; }
+  body.res #RESShortcutsSort, body.res #RESShortcutsRight, body.res #RESShortcutsLeft, body.res #RESShortcutsAdd, body.res #RESShortcutsTrash {
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 35px;
+    color: #AAA; }
+  body.res .srSep {
+    color: #AAA; }
+  body.res #RESShortcutsSort {
+    top: -2px; }
+  body.res #RESShortcutsLeft {
+    width: 12px; }
+  body.res #RESShortcutsAdd {
+    background: transparent; }
+  body.res #RESShortcutsRight {
+    width: 12px;
+    right: 7px; }
+  body.res #userbarToggle {
+    width: auto;
+    height: 35px;
+    left: -7px;
+    background: transparent;
+    padding: 0 7px;
+    border-right: none;
+    border-radius: 0;
+    border-bottom-left-radius: 3px;
+    line-height: 35px !important;
+    text-align: center;
+    font-size: 16px;
+    color: #666; }
+  body.res #userbarToggle.userbarShow {
+    background: transparent;
+    left: -15px; }
+  body.res #header-bottom-right #RESAccountSwitcherIcon {
+    position: relative;
+    top: -2px; }
+  body.res .titlebox .fancy-toggle-button {
+    margin: 10px 0 1px 0; }
+  body.res .RESshortcutside, body.res .RESDashboardToggle {
+    color: #FFF;
+    font-weight: normal;
+    height: 20px;
+    line-height: 19px;
+    border: none;
+    border-radius: 0;
+    background: #4AA3DF;
+    margin: 0 0 15px 0;
+    display: inline-block;
+    width: 138px; }
+    html.res-nightmode body.res .RESshortcutside, html:lang(nm) body.res .RESshortcutside, html.res-nightmode body.res .RESDashboardToggle, html:lang(nm) body.res .RESDashboardToggle {
+      background: #3BC492 !important; }
+  body.res .RESshortcutside {
+    margin-right: 1px;
+    width: 137px; }
+  body.res .RESshortcutside:hover, body.res .RESDashboardToggle:hover {
+    background: #60b6f0;
+    color: #FFF; }
+    html.res-nightmode body.res .RESshortcutside:hover, html:lang(nm) body.res .RESshortcutside:hover, html.res-nightmode body.res .RESDashboardToggle:hover, html:lang(nm) body.res .RESDashboardToggle:hover {
+      background: #37B587; }
+  body.res .RESshortcutside.remove, body.res .RESDashboardToggle.remove {
+    background: #54a9e2; }
+  body.res .titlebox .subscribers {
+    margin-top: -63px; }
+  body.res .search-page a#viewImagesButton {
+    display: none; }
+  body.res .link .redditSingleClick {
+    color: #666;
+    font-weight: normal; }
+  body.res a.voteWeight {
+    background: transparent !important;
+    color: #666; }
+  body.res a.voteWeight:hover, body.res .link .redditSingleClick:hover {
+    color: #AAA; }
+  body.res .RESUserTagImage {
+    background-image: url(%%res%%); }
+  body.res #REScommentNavToggle {
+    margin-top: 10px; }
+  body.res #REScommentNavToggle .commentNavSortType:hover {
+    text-decoration: none;
+    color: #AAA; }
+  body.res #REScommentNavToggle span:first-of-type {
+    margin-left: 0; }
+  body.res .markdownEditor {
+    position: relative; }
+  body.res .RESMacroDropdownTitle {
+    padding-left: 2px;
+    text-decoration: none; }
+  body.res span.RESCharCounter {
+    margin-top: 2px;
+    font-size: 11px;
+    text-align: right; }
+  body.res .commentarea span.RESCharCounter {
+    margin-left: 66px;
+    position: absolute; }
+  body.res .commentingAs {
+    margin: 15px 0 8px;
+    font-size: 12px;
+    color: #666;
+    font-family: sans-serif; }
+  body.res .res-commentBoxes .comment {
+    border: none !important;
+    border-radius: 0 !important; }
+  body.res .comment.thing .tagline .author.submitter {
+    background-color: transparent !important;
+    color: #3498db !important; }
+  body.res .content button.RESBigEditorPop {
+    text-indent: 0;
+    margin: 1px 0 0 8px;
+    font-family: sans-serif;
+    color: #CCC;
+    background: #369;
+    border: none; }
+  body.res .commentarea .RESSubscriptionButton {
+    background: #369;
+    border: none;
+    font-weight: normal;
+    border-radius: 0;
+    color: #FFF;
+    font-size: 11px;
+    padding: 3px 0;
+    font-family: sans-serif;
+    text-transform: capitalize; }
+  body.res .commentarea .RESSubscriptionButton:hover {
+    color: #AAA; }
+  body.res #header-bottom-right {
+    padding: 0px;
+    top: 165px;
+    height: 35px;
+    line-height: 35px;
+    background: transparent !important; }
+  body.res #header-bottom-right.res-navTop {
+    top: 35px;
+    right: 16px; }
+  body.res.pinHeader-userbar #header-bottom-right[style*="position: fixed"] {
+    background: #000 !important; }
+  body.res.pinHeader-subanduser #sr-header-area {
+    background: #000; }
+  body.res.pinHeader-subanduser #header-bottom-right {
+    top: 35px !important;
+    background: #000 !important; }
+  body.res.pinHeader-sub #sr-header-area {
+    background: #000; }
+  body.res.pinHeader-header .side .titlebox .md a[href="http://nm.reddit.com/r/spacemods"], body.res.pinHeader-header .side .titlebox .md a[href="http://www.reddit.com/r/spacemods"] {
+    position: fixed; }
+  body.res.pinHeader-header.moderator .side .titlebox .md h6:last-of-type {
+    position: fixed; }
+  body.res .side .titlebox .md a[href="http://nm.reddit.com/r/space"], body.res .side .titlebox .md a[href="http://www.reddit.com/r/space"] {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 165px;
+    right: 10px;
+    text-indent: -9999px;
+    font-size: 0;
+    z-index: 999;
+    opacity: 0.5; }
+    body.res .side .titlebox .md a[href="http://nm.reddit.com/r/space"]:hover, body.res .side .titlebox .md a[href="http://www.reddit.com/r/space"]:hover {
+      opacity: 1; }
+  body.res .commentarea .usertext > .usertext-edit > div:nth-of-type(1):after {
+    content: "Comments that do not contribute to the discussion, low-effort comments, comments consisting solely of an image, and other comments that violate our guidelines will be removed. These comments should be reported.";
+    width: 490px;
+    padding: 5px 5px;
+    display: block;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 6px; }
+  body.res #srList {
+    top: 35px; }
+  body.res #sr-header-area {
+    line-height: 35px; }
+  body.res #srLeftContainer, body.res #RESShortcutsViewport, body.res #RESShortcutsEditContainer {
+    max-height: 35px; }
+  body.res .titlebox h1 + div {
+    padding: 5px; }
+  body.res .commentarea .expando-button {
+    vertical-align: middle !important; }
+  body.res .RESDialogSmall .fancy-toggle-button {
+    width: auto; }
+    body.res .RESDialogSmall .fancy-toggle-button a {
+      width: auto !important; }
+  body.res #srList {
+    padding: 3px;
+    top: 35px;
+    left: 0px;
+    border: none;
+    background-color: #FFF; }
+    html.res-nightmode body.res #srList, html:lang(nm) body.res #srList {
+      margin-left: 2px;
+      background: #111; }
+  body.res #srList tr {
+    border-bottom: none; }
+  body.res #srList tr:hover {
+    background-color: #EEE; }
+    html.res-nightmode body.res #srList tr:hover, html:lang(nm) body.res #srList tr:hover {
+      background-color: #222;
+      color: #EEE; }
+  body.res #srList tr td {
+    padding: 3px 0;
+    text-transform: uppercase;
+    color: gray; }
+  body.res #srList tr td a {
+    color: gray; }
+  body.res #srList thead tr td, body.res #srList thead tr td a {
+    color: #333; }
+    html.res-nightmode body.res #srList thead tr td, html:lang(nm) body.res #srList thead tr td, html.res-nightmode body.res #srList thead tr td a, html:lang(nm) body.res #srList thead tr td a {
+      color: #EEE; }
+  body.res #srList {
+    transition: max-height 250ms, padding 0s; }
+  body.res #srList[style*="display: none"] {
+    display: block !important;
+    max-height: 0px !important;
+    padding: 0px !important;
+    transition: max-height 250ms, padding 0s 250ms; }
+  body.res .markdownEditor .RESMacroDropdown[style*="display: none"] {
+    max-height: 0px !important;
+    transition: max-height 250ms; }
+  body.res .markdownEditor .RESMacroDropdown {
+    max-height: 1000px;
+    transition: max-height 250ms;
+    overflow: hidden;
+    display: inline-block !important; }
+  body.res .RESshortcutside, body.res .RESDashboardToggle {
+    transition: background 250ms; }
+  body.res .RESThrobber, body.res .RESThrobber::before, body.res .RESThrobber::after {
+    box-shadow: none !important; }
+  body.res .RESThrobber {
+    width: 60px !important;
+    height: 63px !important;
+    border-radius: 0px;
+    background: transparent;
+    -webkit-animation: bobble 1s infinite;
+    -moz-animation: bobble 1s infinite;
+    -ms-animation: bobble 1s infinite;
+    animation: bobble 1s infinite; }
+  body.res .RESThrobber::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 60px !important;
+    height: 63px !important;
+    border-radius: 0px;
+    background: url(%%floatingsnoo2%%) transparent no-repeat;
+    background-position: 0px 0px;
+    content: " ";
+    z-index: 99;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important; }
+  body.res .RESThrobber::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 60px !important;
+    height: 63px !important;
+    border-radius: 0px;
+    background: url(%%floatingsnoo2%%) transparent no-repeat;
+    background-position: 0px -63px;
+    content: " ";
+    z-index: 98;
+    -webkit-animation: bobble 1s infinite;
+    -moz-animation: bobble 1s infinite;
+    -ms-animation: bobble 1s infinite;
+    animation: bobble 1s infinite; }
+  body.res .RESThrobber + .NERWidgetText {
+    display: block;
+    padding-top: 7px; }
+  html.res-nightmode body.res .link .entry .expando-button.image.collapsedExpando, html.res-nightmode body.res .link .entry .expando-button.image.expanded, html:lang(nm) body.res .link .entry .expando-button.image.collapsedExpando, html:lang(nm) body.res .link .entry .expando-button.image.expanded {
+    background-position: -40px -98px !important; }
+  html.res-nightmode body.res .link .entry .expando-button.image.collapsedExpando:hover, html.res-nightmode body.res .link .entry .expando-button.image.expanded:hover, html:lang(nm) body.res .link .entry .expando-button.image.collapsedExpando:hover, html:lang(nm) body.res .link .entry .expando-button.image.expanded:hover {
+    background-position: -60px -98px !important; }
+  html.res-nightmode body.res #sr-header-area, html:lang(nm) body.res #sr-header-area {
+    background: transparent !important; }
+  html.res-nightmode body.res #header-bottom-left, html:lang(nm) body.res #header-bottom-left {
+    background: transparent !important; }
+  html.res-nightmode body.res .morelink, html.res-nightmode body.res .sidebox, html.res-nightmode body.res .subredditbox, html.res-nightmode body.res .subreddit-info, html.res-nightmode body.res .raisedbox, html.res-nightmode body.res .login-form-side, html:lang(nm) body.res .morelink, html:lang(nm) body.res .sidebox, html:lang(nm) body.res .subredditbox, html:lang(nm) body.res .subreddit-info, html:lang(nm) body.res .raisedbox, html:lang(nm) body.res .login-form-side {
+    border-radius: 0px !important;
+    border: 0px !important; }
+  html.res-nightmode body.res .side, html.res-nightmode body.res .side .titlebox .usertext-body ul, html.res-nightmode body.res .side .titlebox .usertext-body ol, html.res-nightmode body.res .content, html:lang(nm) body.res .side, html:lang(nm) body.res .side .titlebox .usertext-body ul, html:lang(nm) body.res .side .titlebox .usertext-body ol, html:lang(nm) body.res .content {
+    background: transparent !important; }
+  html.res-nightmode body.res .RES-keyNav-activeElement, html.res-nightmode body.res .RES-keyNav-activeElement .usertext-body, html.res-nightmode body.res .RES-keyNav-activeElement .usertext-body .md, html.res-nightmode body.res .RES-keyNav-activeElement .usertext-body .md p, html.res-nightmode body.res .commentarea .RES-keyNav-activeElement .noncollapsed, html.res-nightmode body.res .RES-keyNav-activeElement .noncollapsed .md, html.res-nightmode body.res .RES-keyNav-activeElement .noncollapsed .md p, html:lang(nm) body.res .RES-keyNav-activeElement, html:lang(nm) body.res .RES-keyNav-activeElement .usertext-body, html:lang(nm) body.res .RES-keyNav-activeElement .usertext-body .md, html:lang(nm) body.res .RES-keyNav-activeElement .usertext-body .md p, html:lang(nm) body.res .commentarea .RES-keyNav-activeElement .noncollapsed, html:lang(nm) body.res .RES-keyNav-activeElement .noncollapsed .md, html:lang(nm) body.res .RES-keyNav-activeElement .noncollapsed .md p {
+    background-color: #424242 !important; }
+  html.res-nightmode body.res .arrow, html:lang(nm) body.res .arrow {
+    margin-top: 2px !important; }
+
+html.res-nightmode .link .entry .expando-button.image.collapsedExpando, html.res-nightmode .link .entry .expando-button.image.expanded, html:lang(nm) .link .entry .expando-button.image.collapsedExpando, html:lang(nm) .link .entry .expando-button.image.expanded {
+  background-position: -40px -98px !important; }
+html.res-nightmode .link .entry .expando-button.image.collapsedExpando:hover, html.res-nightmode .link .entry .expando-button.image.expanded:hover, html:lang(nm) .link .entry .expando-button.image.collapsedExpando:hover, html:lang(nm) .link .entry .expando-button.image.expanded:hover {
+  background-position: -60px -98px !important; }
+html.res-nightmode #sr-header-area, html:lang(nm) #sr-header-area {
+  background: transparent !important; }
+html.res-nightmode #header-bottom-left, html:lang(nm) #header-bottom-left {
+  background: transparent !important; }
+html.res-nightmode .morelink, html.res-nightmode .sidebox, html.res-nightmode .subredditbox, html.res-nightmode .subreddit-info, html.res-nightmode .raisedbox, html.res-nightmode .login-form-side, html:lang(nm) .morelink, html:lang(nm) .sidebox, html:lang(nm) .subredditbox, html:lang(nm) .subreddit-info, html:lang(nm) .raisedbox, html:lang(nm) .login-form-side {
+  border-radius: 0px !important;
+  border: 0px !important; }
+html.res-nightmode .side, html.res-nightmode .side .titlebox .usertext-body ul, html.res-nightmode .side .titlebox .usertext-body ol, html.res-nightmode .content, html:lang(nm) .side, html:lang(nm) .side .titlebox .usertext-body ul, html:lang(nm) .side .titlebox .usertext-body ol, html:lang(nm) .content {
+  background: transparent !important; }
+html.res-nightmode .RES-keyNav-activeElement, html.res-nightmode .RES-keyNav-activeElement .usertext-body, html.res-nightmode .RES-keyNav-activeElement .usertext-body .md, html.res-nightmode .RES-keyNav-activeElement .usertext-body .md p, html.res-nightmode .commentarea .RES-keyNav-activeElement .noncollapsed, html.res-nightmode .RES-keyNav-activeElement .noncollapsed .md, html.res-nightmode .RES-keyNav-activeElement .noncollapsed .md p, html:lang(nm) .RES-keyNav-activeElement, html:lang(nm) .RES-keyNav-activeElement .usertext-body, html:lang(nm) .RES-keyNav-activeElement .usertext-body .md, html:lang(nm) .RES-keyNav-activeElement .usertext-body .md p, html:lang(nm) .commentarea .RES-keyNav-activeElement .noncollapsed, html:lang(nm) .RES-keyNav-activeElement .noncollapsed .md, html:lang(nm) .RES-keyNav-activeElement .noncollapsed .md p {
+  background-color: #424242 !important; }
+html.res-nightmode .arrow, html:lang(nm) .arrow {
+  margin-top: 2px !important; }
+html.res-nightmode .RESshortcutside, html.res-nightmode .RESDashboardToggle, html:lang(nm) .RESshortcutside, html:lang(nm) .RESDashboardToggle {
+  background: #3BC492 !important; }
+
+/* Assorted */
+a.author[href$="user/AutoModerator"] {
+  visibility: hidden;
+  font-size: 0; }
+
+a.author[href$="user/AutoModerator"]::after {
+  visibility: visible;
+  font-size: 10px;
+  content: "SpaceModBot";
+  margin-right: 5px; }
+
+.res .tagline .author[href$="AutoModerator"].moderator:after {
+  padding: 0 2px;
+  background: #282;
+  border-radius: 3px; }
+
+.res .markdownEditor-wrapper {
+  max-height: 105px !important; }
+
+
+.side a.voteWeight {
+  display: none !important; }
+
+.side .RESUserTagImage {
+  display: none !important; }
+
+/* reddit live embed fix */
+body.liveupdate-app > .content {
+  margin: 0 auto; }
+
+.post-linkflair-crosspost.post-linkflair-ama .commentarea::before {
+  content: "This is an AMA crosspost (a link to an AMA in another subreddit); your questions will not be seen if they are posted here.";
+  width: 99%;
+  padding: 10px;
+  display: block;
+  background: #e74c3c;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFF;
+  border: 1px solid #c0392b; }
+
+/* planetary society flair */
+.flair-planetary-society {
+  padding: 9px 4px 4px 28px;
+  border-radius: 4px;
+  color: #2c95b5;
+  background-color: white;
+  background-image: url(%%ps-flair%%);
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+  height: 20px; }
+
+/* jpl flair */
+.flair-jpl {
+  padding: 9px 4px 4px 58px;
+  border-radius: 4px;
+  color: #2c95b5;
+  background-color: white;
+  background-image: url(%%jpl%%);
+  background-repeat: no-repeat;
+  background-position: 4px 6px;
+  height: 20px; }
+
+.post-linkflair-ama .id-t2_r07yw {
+    color: #3498db !important;
+}
+
+.post-linkflair-ama .id-t2_r07yw::after {
+    content: " - AMA Participant";
+}
+
+/*== Link Flair ==*/
+.linkflair-context .linkflairlabel {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 14px; }
+
+.linkflairlabel, .flair {
+  max-width: 100%; }
+
+.linkflair-black .linkflairlabel {
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px; }
+
+.linkflair-error .linkflairlabel, .linkflair-error.linkflairlabel {
+  border: 1px solid white;
+  color: white;
+  background-color: #df7474;
+  border-radius: 4px; }
+
+.linkflair-approved .linkflairlabel {
+  border: 1px solid #0C3;
+  color: #0C3;
+  border-radius: 4px; }
+
+.linkflair-ama .linkflairlabel {
+  background: #e74c3c;
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 0 0 5px #999;
+  padding-bottom: 1px;
+  border-bottom: 2px solid #c0392b;
+  border-radius: 0; }
+
+.subreddit-rules-page {
+  margin-top: 30px;
+}
+.reportform .action-icon.action-icon-info {
+    width: auto;
+    overflow: initial;
+    text-indent: initial;
+    padding-left: 19px;
+}
